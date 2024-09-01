@@ -23,8 +23,8 @@ await m.react('✅');
 await m.react('❌'); 
 }}
 
-handler.help = ['tiktok2 *<link>*']
+handler.help = ['test2 *<link>*']
 handler.tags = ['dl'] 
-handler.command = ['tiktok2', 'tt']
+handler.command = ['test2']
 
 export default handler;
