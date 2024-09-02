@@ -4,21 +4,21 @@ const handler = async (m, {conn, text}) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0];
   else who = m.chat;
-  if (!who) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙰 𝙰 𝚄𝙽 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 𝙲𝙾𝙽 𝙴𝙻 @𝚝𝚊𝚐*';
+  if (!who) throw '*etiqueta 🏷️ ala persona para agregarle sus corazones 🤍*';
   const txt = text.replace('@' + who.split`@`[0], '').trim();
-  if (!txt) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙰 𝙻𝙰 𝙲𝙰𝙽𝚃𝙸𝙳𝙰𝙳 𝙳𝙴 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙰 𝙰𝙽̃𝙰𝙳𝙸𝚁*';
-  if (isNaN(txt)) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝚂𝙸𝙼𝙱𝙾𝙻𝙾 𝙽𝙾 𝙰𝙳𝙼𝙸𝚃𝙸𝙳𝙾, 𝚂𝙾𝙻𝙾 𝙽𝚄𝙼𝙴𝚁𝙾𝚂!*';
+  if (!txt) throw 'ingresa la cantidad de corazones 🤍 a agregar';
+  if (isNaN(txt)) throw 'no se admiten símbolos solo números 🔢';
   const dmt = parseInt(txt);
   let limit = dmt;
   const pjk = Math.ceil(dmt * pajak);
   limit += pjk;
-  if (limit < 1) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙼𝙸𝙽𝙸𝙼𝙾 𝙳𝙴 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝙿𝙰𝚁𝙰 𝙰𝙽̃𝙰𝙳𝙸𝚁 𝙴𝚂 𝟷*';
+  if (limit < 1) throw '*el número mínimo de corazones a agregar es 1 🤍*';
   const users = global.db.data.users;
   users[who].corazones += dmt;
-  m.reply(`≡ *💎 𝙰𝙽̃𝙰𝙳𝙸𝙳𝙾*
-┌──────────────
-▢ *𝚃𝚘𝚝𝚊𝚕:* ${dmt} 🤍
-└──────────────`);
+  m.reply(`*🤍 𝐀𝐆𝐑𝐄𝐆𝐀𝐃𝐎*
+
+𝐓𝐨𝐭𝐚𝐥: ${dmt} 🤍
+𝐅𝐞𝐜𝐡𝐚: ${fecha} 📆`);
 };
 handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
 handler.rowner = true;
