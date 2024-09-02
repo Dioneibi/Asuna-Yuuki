@@ -17,7 +17,7 @@ const handler = async (m, {conn, text}) => {
   users[who].corazones += dmt;
   m.reply(`≡ *💎 𝙰𝙽̃𝙰𝙳𝙸𝙳𝙾*
 ┌──────────────
-▢ *𝚃𝚘𝚝𝚊𝚕:* ${dmt}
+▢ *𝚃𝚘𝚝𝚊𝚕:* ${dmt} 🤍
 └──────────────`);
 };
 handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
