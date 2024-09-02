@@ -20,6 +20,6 @@ const handler = async (m, {conn, text}) => {
 𝐓𝐨𝐭𝐚𝐥: ${dmt} 🤍
 𝐅𝐞𝐜𝐡𝐚: ${fecha} 📆`);
 };
-handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
+handler.command = ['añadircorazones', 'addc', 'darc', 'darcorazones'];
 handler.rowner = true;
 export default handler;
