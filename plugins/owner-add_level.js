@@ -17,7 +17,7 @@ const handler = async (m, {conn, text}) => {
   users[who].level += dmt;
   m.reply(`*🤍 𝐀𝐆𝐑𝐄𝐆𝐀𝐃𝐎*
 
-𝐓𝐨𝐭𝐚𝐥: ${dmt} 
+𝐓𝐨𝐭𝐚𝐥: ${dmt} 🆙
 𝐅𝐞𝐜𝐡𝐚: ${fecha} 📆`);
 };
 handler.command = ['addlevel'];
