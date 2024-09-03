@@ -1,4 +1,4 @@
-const { generateWAMessageFromContent, proto } = (await import('@adiwajshing/baileys')).default
+import MessageType from '@whiskeysockets/baileys';
 
 function clockString(ms) {
     let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
