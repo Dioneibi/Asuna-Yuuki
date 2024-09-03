@@ -40,5 +40,4 @@ handler.help = ['addlevel @user <level>']
 handler.tags = ['xp']
 handler.command = /^addlevel$/
 handler.owner =true
-handler.group = true
 export default handler
