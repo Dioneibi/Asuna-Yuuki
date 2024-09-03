@@ -1,37 +1,25 @@
 import MessageType from '@whiskeysockets/baileys';
+const pajak = 0;
+const handler = async (m, {conn, text}) => {
+  let who;
+  if (m.isGroup) who = m.mentionedJid[0];
+  else who = m.chat;
+  if (!who) throw '*etiqueta 🏷️ ala persona para agregarle sus corazones 🤍*';
+  const txt = text.replace('@' + who.split`@`[0], '').trim();
+  if (!txt) throw 'ingresa la cantidad de corazones 🤍 a agregar';
+  if (isNaN(txt)) throw 'no se admiten símbolos solo números 🔢';
+  const dmt = parseInt(txt);
+  let limit = dmt;
+  const pjk = Math.ceil(dmt * pajak);
+  limit += pjk;
+  if (limit < 1) throw '*el número mínimo de corazones a agregar es 1 🤍*';
+  const users = global.db.data.users;
+  users[who].level += dmt;
+  m.reply(`*🤍 𝐀𝐆𝐑𝐄𝐆𝐀𝐃𝐎*
 
-let handler = async (m, { conn, text }) => {
-    if (!text) throw 'Masukkan jumlah Limit yang akan diberi'
-    let who
-    if (m.isGroup) who = m.mentionedJid[0]
-    else who = m.chat
-    if (!who) throw 'Tag salah satu lah'
-    let txt = text.replace('@' + who.split`@`[0], '').trim()
-    if (isNaN(txt)) throw 'Hanya angka'
-    let poin = parseInt(txt)
-    let limit = poin
-    if (limit < 1) throw 'Minimal 1'
-    if (limit >= 10000) throw 'kamu melebihi batas premium'    
-    let users = global.db.data.users    
-    if (!users[who]) {
-        users[who] = {
-            limit: 0,
-            cooldown: 0
-        }
-    }    
-    if (users[who].cooldown && users[who].cooldown > Date.now()) {
-        let cooldown = clockString(users[who].cooldown - Date.now())
-        throw `Tunggu *${cooldown}* lagi sebelum menggunakan command ini`
-    }    
-    users[who].level += poin
-    users[who].cooldown = Date.now() + (5 * 60 * 1000)
-    conn.reply(m.chat, `Selamat @${who.split`@`[0]}. Level kamu naik menjadi ${poin}`, m, { mentions: [who] }, {
-        mentions: [m.sender]
-    }) 
-}
-
-handler.help = ['addlevel @user <level>']
-handler.tags = ['xp']
-handler.command = /^addlevel$/
-handler.owner =true
-export default handler
+𝐓𝐨𝐭𝐚𝐥: ${dmt} 
+𝐅𝐞𝐜𝐡𝐚: ${fecha} 📆`);
+};
+handler.command = ['addlevel'];
+handler.rowner = true;
+export default handler;
