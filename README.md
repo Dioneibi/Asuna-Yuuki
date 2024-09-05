@@ -86,9 +86,15 @@
 <a href="https://nexus-host.shop"><img src="https://qu.ax/KFqK.jpg" height="125px"></a>
 ### Información del Host
 
+<details>
+ <summary><b>:paperclip: Enlaces Importantes</b></summary>
+
 - **Dashboard:** [`Aquí`](https://dash.nexus-host.shop)
 - **Panel:** [`Aquí`](https://panel.nexus-host.shop)
 - **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX)
+
+</details>
+
 ------------------
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
