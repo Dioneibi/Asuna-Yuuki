@@ -84,7 +84,6 @@
 ------------------
 ### 🔰 NEXUS-HOST 
 <a href="https://nexus-host.shop"><img src="https://qu.ax/KFqK.jpg" height="125px"></a>
-### Información del Host
 
 <details>
  <summary><b>:paperclip: Enlaces Importantes</b></summary>
