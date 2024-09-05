@@ -64,7 +64,6 @@
 
 </details>
 
-------------------  
 
 ### **`🔵 OLYMPUS-HOST`**  
 <a href="https://kingsvhost.asifofc.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
@@ -79,7 +78,7 @@
 
 </details>
 
-------------------
+
 ### 🔰 NEXUS-HOST 
 <a href="https://nexus-host.shop"><img src="https://qu.ax/KFqK.jpg" height="125px"></a>
 
@@ -92,7 +91,7 @@
 
 </details>
 
-------------------
+
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
 
