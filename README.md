@@ -104,6 +104,7 @@ href="https://github.com/Dev-Diego"><img src="https://github.com/Dev-Diego.png" 
 <a href="https://github.com/ale-rmz"><img src="https://github.com/ale-rmz.png" width="100" height="100" alt="ale-rmz"/></a>
 <a href="https://github.com/Maxz-on"><img src="https://github.com/Maxz-on.png" width="100" height="100" alt="Maxz-on"/></a>
 <a href="https://github.com/AkiraaX2"><img src="https://github.com/AkiraaX2.png" width="100" height="100" alt="AkiraaX2"/></a>
+src="https://github.com/Jostin-444.png" width="100" height="100" alt="Jostin-444"/></a>
 
 ### 🤍 CREADOR 
 <a
