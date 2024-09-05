@@ -28,10 +28,10 @@ function start(file) {
 if (isRunning) return;
 isRunning = true;
 let args = [join(__dirname, file), ...process.argv.slice(2)];
-say('Version: ${vs}', {
+say([process.argv[0], ...args].join(' '), {
 font: 'console',
 align: 'center',
-colors: ['yellow']
+colors: ['green']
 });
 setupMaster({
 exec: args[0],
