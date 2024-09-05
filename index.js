@@ -18,7 +18,7 @@ font: 'block',
 align: 'center',
 colors: ['white']
 });
-say(`By • Ángel OFC`, {
+say(`By • Angel OFC`, {
 font: 'console',
 align: 'center',
 colors: ['yellow']
