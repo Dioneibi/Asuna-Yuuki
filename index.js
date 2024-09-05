@@ -28,7 +28,7 @@ function start(file) {
 if (isRunning) return;
 isRunning = true;
 let args = [join(__dirname, file), ...process.argv.slice(2)];
-say([process.argv[0], ...args].join(' '), {
+say('Version ${vs}', {
 font: 'console',
 align: 'center',
 colors: ['green']
