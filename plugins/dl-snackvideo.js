@@ -7,6 +7,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 try {
   let res= await snack(text) 
   let capt = `Usuario : ${res.author}\nLikes : ${res.like}\nComentarios : ${res.comment}\nCompartidas : ${res.share}`
+  m.react('✅') 
   conn.sendFile(m.chat, res.media, '', capt, m)
 } catch (e) {
   console.log(e);
