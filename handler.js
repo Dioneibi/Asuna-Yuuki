@@ -169,7 +169,8 @@ if (!('modohorny' in chat)) chat.modohorny = true
 if (!('autosticker' in chat)) chat.autosticker = false      
 if (!('audios' in chat)) chat.audios = true               
 if (!('antiver' in chat)) chat.antiver = false 
-if (!('antiPorn' in chat)) chat.antiPorn = false     
+if (!('antiPorn' in chat)) chat.antiPorn = false  
+if (!('antiBot' in chat)) chat.antiBot = true   
 if (!('antiLink' in chat)) chat.antiLink = true     
 if (!('antiLink2' in chat)) chat.antiLink2 = false
 if (!('antiTiktok' in chat)) chat.antiTiktok = false
@@ -206,6 +207,7 @@ autosticker: false,
 audios: true,
 antiver: false,
 antiPorn: false,
+antiBot: true,
 antiLink: true,
 antiLink2: false,
 antiTiktok: false,
