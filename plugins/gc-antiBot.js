@@ -23,7 +23,7 @@ let handler = async (
 	}
 };
 
-handler.help = ["antibot *on/off*"];
+handler.help = ["antibot *enable/off*"];
 handler.tags = ["group"];
 handler.group = true;
 handler.command = ["antibot"];
