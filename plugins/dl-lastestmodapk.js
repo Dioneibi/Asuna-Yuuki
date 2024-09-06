@@ -18,9 +18,9 @@ return conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, )}
 
 }
 handler.help = ['dlmodlatest']
-handler.tags = ['descargas']
+handler.corazones = 2
+handler.tags = ['dl']
 handler.command = ['dllatest', 'dlmodlatest'] 
-
 handler.register = true
 handler.limit = true
 
