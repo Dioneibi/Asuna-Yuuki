@@ -51,6 +51,7 @@ await m.react('✅')
 await m.react('✖️')
 }}}}
 handler.help = ['ytmp3doc *<link yt>*']
+handler.corazones = 2
 handler.tags = ['dl']
 handler.command = ['ytmp3doc', 'ytadoc'] 
 //handler.limit = 1
