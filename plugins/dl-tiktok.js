@@ -32,7 +32,7 @@ await m.react('🕓');
 };
 
 handler.help = ['tiktok *<link>*']
-handler.corazones = 3
+handler.corazones = 2
 handler.tags = ['dl'] 
 handler.command = /^(tiktok|ttdl|tiktokdl|tiktoknowm)$/i;
 
