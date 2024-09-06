@@ -7,6 +7,7 @@ const miniopcion = `🤍 *OPCIONES PARA GRUPOS*
 ${usedPrefix + command} welcome
 ${usedPrefix + command} detect
 ${usedPrefix + command} antidelete
+${usedPrefix + command} antiBot
 ${usedPrefix + command} antilink
 ${usedPrefix + command} antilink2
 ${usedPrefix + command} modohorny
