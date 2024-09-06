@@ -8,8 +8,6 @@ const handler = async (m, {conn, usedPrefix}) => {
     conn.reply(m.chat, 'Todavía hay acertijos sin responder en este chat', conn.tekateki[id][0]);
     throw false;
   }
-  const users = global.db.data.users;
-  users[who].corazones += dmt;
   const tekateki = JSON.parse(fs.readFileSync(`./src/game/acertijo.json`));
   const json = tekateki[Math.floor(Math.random() * tekateki.length)];
   const _clue = json.response;
@@ -19,7 +17,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ✨️ *${json.question}*
 
 ⏱️ *Tiempo:* ${(timeout / 1000).toFixed(2)} Segundos
-🎁 *Premio:* *+${dmt}* Centavos 🪙`.trim();
+🎁 *Premio:* *+${poin}* Centavos 🪙`.trim();
   conn.tekateki[id] = [
     await conn.reply(m.chat, caption, m), json,
     poin,
