@@ -19,12 +19,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ⏱️ *Tiempo:* ${(timeout / 1000).toFixed(2)} Segundos
 🎁 *Premio:* *+${poin}* Centavos 🪙`.trim();
   conn.tekateki[id] = [
-await conn.sendButton(m.chat, caption, 'Quiz🍃', [
-[_clue, _clue],
-["Opción 2"," Opción 2"],
-["Opción 3"," Opción 3"]
-], null, m)
-//await conn.reply(m.chat, caption, m), json,
+    await conn.reply(m.chat, caption, m), json,
     poin,
     setTimeout(async () => {
       if (conn.tekateki[id]) await conn.reply(m.chat, `🤍 Se acabó el tiempo!\n*Respuesta:* ${json.response}`, conn.tekateki[id][0]);
