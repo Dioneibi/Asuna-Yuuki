@@ -82,6 +82,15 @@ throw false
 global.opts['self'] = !isEnable
 break
 
+case 'antiBot': case 'antibot':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antiBot = isEnable
+break
+
 case 'antilink': case 'antienlace':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
