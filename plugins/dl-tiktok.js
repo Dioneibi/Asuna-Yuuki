@@ -24,7 +24,7 @@ await m.react('🕓');
         let txt = '';
         txt += ``;
 
-        await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m);
+        await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m, null, rcanal);
         await m.react('✅'); 
     } catch {
         await m.react('❌'); 
