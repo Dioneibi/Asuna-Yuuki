@@ -19,7 +19,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ⏱️ *Tiempo:* ${(timeout / 1000).toFixed(2)} Segundos
 🎁 *Premio:* *+${poin}* Centavos 🪙`.trim();
   conn.tekateki[id] = [
-    await conn.sendButton(m.chat, caption, '@usxr_angelito0', pp, [
+    await conn.sendButton(m.chat, caption, '@usxr_angelito0', [
 ['DUEÑO 🤍', '.owner']], null, [['GIT HUB 🤍', `https://github.com/Angelito-OFC/GenesisBot-MD`]], m), json,
     poin,
     setTimeout(async () => {
