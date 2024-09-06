@@ -21,10 +21,10 @@ await m.react('🕓');
             profilePicture
         } = await ttdl(args[0]);
 
-        let txt = '';
+        let txt = '`[TIKTOK-DOWNLOADER]`';
         txt += ``;
 
-        await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m, null, rcanal);
+        await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
         await m.react('✅'); 
     } catch {
         await m.react('❌'); 
