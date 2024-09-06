@@ -21,7 +21,7 @@ await m.react('🕓');
             profilePicture
         } = await ttdl(args[0]);
 
-        let txt = '`[TIKTOK-DOWNLOADER]`';
+        let txt = '*`[TIKTOK-DOWNLOADER]`* 🤍';
         txt += ``;
 
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
