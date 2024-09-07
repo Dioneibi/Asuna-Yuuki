@@ -4,7 +4,7 @@ import { Pixiv } from '@ibaraki-douji/pixivts'
 const pixiv = new Pixiv()
 
 let handler = async (m, { conn, text }) => {
-if (!text) return m.reply('🤍 *`INGRESA NOMBRE DE LA IMG`*', m, fake)
+if (!text) return m.reply('🤍 *`INGRESA NOMBRE DE LA IMG`*', m, fake, )
 await m.react('🕓')
 try {
 let res = await pixivDl(text)
