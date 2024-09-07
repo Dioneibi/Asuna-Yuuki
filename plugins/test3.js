@@ -13,4 +13,4 @@ let handler = async (m, { conn,setReply }) => {
 };
 handler.help = handler.command = ["ci"];
 handler.tags = ["main"];
-module.exports = handler;
+export default handler;
