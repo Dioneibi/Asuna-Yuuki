@@ -4,7 +4,7 @@ let fitur = Object.values(plugins).filter(v => v.help && !v.disabled).map(v => v
 let totalf = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
- await conn.sendMessage(m.chat, { image: { url: global.thumb }, caption: `Funciones totales del bot actual ${totalf} Funciones` }, m  )
+ await conn.sendMessage(m.chat, { image: icons}, caption: `Funciones totales del bot actual ${totalf} Funciones` }, m  )
 }
 handler.help = ['totalfunc']
 handler.tags = ['info']
