@@ -270,6 +270,15 @@ throw false
 chat.antifake = isEnable          
 break
 
+case 'antiperu': case 'antiperu': case 'antiperu': case 'antiperu': case 'antiperu': case 'antiperu': case 'antiperu':                
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antiperu = isEnable          
+break
+
 case 'jadibot': case 'modojadibot': case 'serbot': case 'modoserbot': 
 isAll = true
 if (!isROwner) {
