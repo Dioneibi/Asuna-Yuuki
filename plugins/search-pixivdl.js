@@ -18,7 +18,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['pixiv *<búsqueda>*']
-handler.tags = ['search', 'img']
+handler.tags = ['search']
 handler.command = /^(pixiv|pixivdl)$/i
 //handler.limit = 1
 handler.register = true 
