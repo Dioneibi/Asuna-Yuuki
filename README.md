@@ -26,7 +26,7 @@
 ***
 
 > [!IMPORTANT]
-> **Si vas a instalar el Bot, te recomiendo usar otro número ya que no vas a poder ejecutar Comandos desde el número del Bot por la protección antes mencionado.**
+> **Si vas a instalar el Bot, o extraerlo toma en cuenta que está totalmente prohibida su venta en cualquier sentido xfavor toma en cuenta y respeta el trabajo del creador..**
 
 ### <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Prueba La Bot Aqui" width="42" height="42"> Prueba La Bot Aqui
 
