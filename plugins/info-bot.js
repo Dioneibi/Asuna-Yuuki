@@ -16,8 +16,8 @@ conn.reply(m.chat, `*pervertido* 🫣`, m, rcanal, )
 /*if (/^a$/i.test(m.text)) {
 conn.reply(m.chat, `*rroz y pollo* 😄👌`, m, rcanal, )
 }*/
-if (/^bug$/i.test(m.text)) {
-conn.reply(m.chat, `*tu mamá we* 😹`, m, rcanal, )
+/*if (/^bug$/i.test(m.text)) {
+conn.reply(m.chat, `*tu mamá we* 😹`, m, rcanal, )*/
 }
 if (/^pene$/i.test(m.text)) {
 conn.reply(m.chat, `*comes* 😹`, m, rcanal, )
