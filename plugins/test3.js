@@ -18,7 +18,7 @@ console.log(data)
                 }, {
                     quoted: m
                 })
-  await conn.sendMessage(m.chat, {audio: {url: data.server1.url}, mimetype: "audio/mp4", fileName: title + '.mp3',caption: cap}, {quoted: m})
+  await conn.sendMessage(m.chat, {audio/mp4: {url: data.server1.url},caption: cap}, {quoted: m})
 await conn.sendMessage(m.chat, {
                     video: {
                         url: data.serverHD.url
