@@ -183,6 +183,7 @@ if (!('antiDiscord' in chat)) chat.antiDiscord = false
 if (!('antiThreads' in chat)) chat.antiThreads = false
 if (!('antiTwitch' in chat)) chat.antiTwitch = false
 if (!('antifake' in chat)) chat.antifake = false
+if (!('antiperu' in chat)) chat.antiperu = false
 if (!('reaction' in chat)) chat.reaction = false  
 if (!('viewonce' in chat)) chat.viewonce = false       
 if (!('modoadmin' in chat)) chat.modoadmin = false    
@@ -220,6 +221,7 @@ antiDiscord: false,
 antiThreads: false,
 antiTwitch: false,
 antifake: false,
+antiperu: false,
 reaction: false,
 viewonce: false,
 modoadmin: false,
