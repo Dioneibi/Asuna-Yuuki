@@ -4,7 +4,7 @@ import { Pixiv } from '@ibaraki-douji/pixivts'
 const pixiv = new Pixiv()
 
 let handler = async (m, { conn, text }) => {
-if (!text) return m.reply('🤍 Ingresa un texto junto al comando.')
+if (!text) return m.reply('🤍 `INGRESA UN TEXTO`', m, fake, )
 await m.react('🕓')
 try {
 let res = await pixivDl(text)
@@ -18,7 +18,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['pixiv *<búsqueda>*']
-handler.tags = ['downloader', 'img']
+handler.tags = ['search', 'img']
 handler.command = /^(pixiv|pixivdl)$/i
 //handler.limit = 1
 handler.register = true 
