@@ -11,7 +11,7 @@ let res = await pixivDl(text)
 for (let i = 0; i < res.media.length; i++) {
 let caption = i == 0 ? `*» Nombre :* ${res.caption}\n*» Subido por :* ${res.artist}\n*» Tags* : ${res.tags.join(', ')}` : ''
 let mime = (await fileTypeFromBuffer(res.media[i])).mime 
-await conn.sendMessage(m.chat, { [mime.split('/')[0]]: res.media[i], caption, mimetype: mime }, { quoted: m, null, rcanal })
+await conn.sendMessage(m.chat, { [mime.split('/')[0]]: res.media[i], caption, mimetype: mime }, { quoted: m })
 await m.react('✅')
 }
 } catch {
