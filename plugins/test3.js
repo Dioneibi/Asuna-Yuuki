@@ -39,7 +39,7 @@ txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
         await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
         await m.react('✅');//reacción al completar el proceso con éxito 
     } catch (e) {//salir si hay un error
-        await m.react('❌');//reacción al fallar con el proceso 
+        await m.react('✖️');//reacción al fallar con el proceso 
         console.log(e)//mostrar el error en la consola
     }
 };
