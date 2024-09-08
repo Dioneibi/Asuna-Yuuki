@@ -24,13 +24,13 @@ await m.react('🕓');//reacción al recibir el comando
        
 let txt = '*`[ TIKTOK DOWNLOAD ]`*\n';
 txt += '> 🤍 *`» Título :`* ${title || '❌'}\n';
-txt += `> 🤍 *`» Autor :`* ${author || '❌'}\n`;
-txt += `> 🤍 *`» Duracion :`* ${duration || '❌'}\n`;
-txt += `> 🤍 *`» Visitas :`* ${views || '❌'}\n`;
-txt += `> 🤍 *`» Likes :`* ${like || '❌'}\n`; 
-txt += `> 🤍 *`» Comentarios :`* ${comment || '❌'}*\n`;
-txt += `> 🤍 *`» Share :`* ${share || '❌'}\n`;
-txt += `> 🤍 *`» Publicado :`* ${published || '❌'}\n`;
+txt += '> 🤍 *`» Autor :`* ${author || '❌'}\n';
+txt += '> 🤍 *`» Duracion :`* ${duration || '❌'}\n';
+txt += '> 🤍 *`» Visitas :`* ${views || '❌'}\n';
+txt += '> 🤍 *`» Likes :`* ${like || '❌'}\n'; 
+txt += '> 🤍 *`» Comentarios :`* ${comment || '❌'}*\n';
+txt += '> 🤍 *`» Share :`* ${share || '❌'}\n';
+txt += '> 🤍 *`» Publicado :`* ${published || '❌'}\n';
 
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m);
