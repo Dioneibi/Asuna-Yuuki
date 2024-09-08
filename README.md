@@ -65,33 +65,6 @@
 </details>
 
 
-### **`🔵 OLYMPUS-HOST`**  
-<a href="https://kingsvhost.asifofc.xyz"><img src="https://qu.ax/waCu.jpg" height="125px"></a>
-
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Dashboard:** [`Aquí`](https://dash.olympus-host.xyz)
-- **Panel:** [`Aquí`](https://dash.olympus-host.xyz)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029ValCkNT2ER6gHWFRQ71J)
-- **Correo:** [`Aquí`](olympussupport@gmail.com.com)
-
-</details>
-
-
-### 🔰 NEXUS-HOST 
-<a href="https://nexus-host.shop"><img src="https://qu.ax/KFqK.jpg" height="125px"></a>
-
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Dashboard:** [`Aquí`](https://dash.nexus-host.shop)
-- **Panel:** [`Aquí`](https://panel.nexus-host.shop)
-- **Grupo de WhatsApp:** [`Aquí`](https://chat.whatsapp.com/DlErIXnbKfx4AvvyngFuSX)
-
-</details>
-
-
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
 
