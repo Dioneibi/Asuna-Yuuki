@@ -1,3 +1,5 @@
+//creditos a kenisawa Dev
+//modificaciones Angel-OFC
 import { ttdl } from 'ruhend-scraper';
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
