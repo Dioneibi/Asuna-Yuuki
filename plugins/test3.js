@@ -25,7 +25,7 @@ await m.react('🕓');
         txt += ``;
 
         await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m);
-await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3', quoted: m, contextInfo: {
+await conn.sendMessage(m.chat, { audio: { url: music}, mimetype: "audio/mp4", fileName: title + '.mp3', quoted: m, contextInfo: {
 'forwardingScore': 200,
 'isForwarded': true,
 externalAdReply:{
