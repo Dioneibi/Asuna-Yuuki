@@ -1,12 +1,49 @@
-import fs from 'fs'
-import fetch from 'node-fetch'
-let handler  = async (m, { conn, usedPrefix: _p }) => {
-    let img = "https://avatars.githubusercontent.com/u/133716066?s=400&u=0c1975543bb02a959e1787e34886329ee7f8949f&v=4"
-let info = `*_𝙼𝙴 𝙼𝙸𝚁𝙰𝚂_*`
-await conn.reply(m.chat, info, m, { contextInfo: { mentionedJid: [m.sender],forwardingScore: 256,
-      isForwarded: true, externalAdReply: { title: author, body: botname, sourceUrl: fgyt, thumbnail: await conn.getFile(img) }}})
-}
-handler.customPrefix = /^(tes|tess|test)$/i
-handler.command = new RegExp
+import { ttdl } from 'ruhend-scraper';
 
-export default handler
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+ if (!args || !args[0]) return conn.reply(m.chat, '*`INGRESA EL LINK DE TIKTOK`*', m, fake, )
+    try {
+await m.react('🕓'); 
+        let {
+            title,
+            author,
+            username,
+            published,
+            like,
+            comment,
+            share,
+            views,
+            bookmark,
+            video,
+            cover,
+            duration,
+            music,
+            profilePicture
+        } = await ttdl(args[0]);
+
+        let txt = '';
+        txt += ``;
+
+        await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m);
+await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3', quoted: m, contextInfo: {
+'forwardingScore': 200,
+'isForwarded': true,
+externalAdReply:{
+showAdAttribution: false,
+title: `${title}`,
+body: `${author}`,
+mediaType: 2, 
+sourceUrl: `${url}`,
+thumbnail: await (await fetch(profilePicture)).buffer()}}}, { quoted: m })
+        await m.react('✅'); 
+    } catch {
+        await m.react('❌'); 
+    }
+};
+
+handler.help = ['tiktok *<link>*']
+handler.corazones = 3
+handler.tags = ['dl'] 
+handler.command = /^(tiktok4)$/i;
+
+export default handler;
