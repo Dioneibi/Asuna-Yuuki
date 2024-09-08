@@ -23,7 +23,7 @@ let handler = async (m, {
 handler.help = ["aichatonline *<text>*"]
 handler.tags = ["ai"];
 handler.command = /^(aichatonline)$/i
-module.exports = handler
+export default handler
 
 /* New Line */
 async function generate(q) {
