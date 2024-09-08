@@ -9,8 +9,8 @@ let data = await tiktokdl(text)
 console.log(data)
   let start = Date.now();
   let sp = (Date.now() - start) + 'ms'
-  let cap = ``
-  let capp = `🤍 *Descargado en:* ${sp}`
+  let cap = `*\`[ TIKTOK CALIDAD NORMAL ]\`*`
+  let capp = `*\`[ TIKTOK CALIDAD HD ]\`*`
   await m.react('🕓');
   await conn.sendMessage(m.chat, {
                     video: {
@@ -24,7 +24,7 @@ await conn.sendMessage(m.chat, {
                     video: {
                         url: data.serverHD.url
                     },
-                    caption: cap
+                    caption: capp
                 }, {
                     quoted: m
                 })
