@@ -28,8 +28,8 @@ txt += "> 🤍 *`» Título :`* ${title || '❌'}\n";
 txt += "> 🤍 *`» Autor :`* ${author || '❌'}\n";
 txt += "> 🤍 *`» Duracion :`* ${duration || '❌'}\n";
 txt += "> 🤍 *`» Visitas :`* ${views || '❌'}\n";
-txt += "> 🤍 *`» Likes :`* ${like || '❌'}\n'; 
-txt += "> 🤍 *`» Comentarios :`* ${comment || '❌'}*\n';
+txt += "> 🤍 *`» Likes :`* ${like || '❌'}\n"; 
+txt += "> 🤍 *`» Comentarios :`* ${comment || '❌'}*\n";
 txt += "> 🤍 *`» Share :`* ${share || '❌'}\n";
 txt += "> 🤍 *`» Publicado :`* ${published || '❌'}\n";
 
