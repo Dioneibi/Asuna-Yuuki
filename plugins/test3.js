@@ -36,7 +36,19 @@ txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
 //audio
-        await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
+        await conn.sendMessage(m.chat, {
+audio: { url: music },
+contextInfo: {
+externalAdReply: {
+title: '[ 𝗔 𝗜 - 𝗞 𝗨 𝗥 𝗨 𝗠 𝗜 ]',
+body: '©𝟐𝟎𝟐𝟒 𝐀𝐧𝐠𝐞𝐥𝐢𝐭𝐨-𝐎𝐅𝐂',
+thumbnailUrl: 'https://tinyurl.com/245mnfeh',
+sourceUrl: canal,
+mediaType: "audio/mp4",
+fileName: title + '.mp3' },
+renderLargerThumbnail: true
+}}},
+{ quoted: m})
         await m.react('✅');//reacción al completar el proceso con éxito 
     } catch (e) {//salir si hay un error
         await m.react('❌');//reacción al fallar con el proceso 
