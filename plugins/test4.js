@@ -23,8 +23,9 @@ await m.react('✅');
 await m.react('❌'); 
 }}
 
-handler.help = ['tiktok *<link>*']
-handler.tags = ['dl'] 
-handler.command = ['tiktok6']
+handler.help = ['tiktok *<link>*']//exportar nombre de comando al menu
+handler.corazones = 3 //limites/corazones necesarios para usar el comandos
+handler.tags = ['dl']//menciones para agrupar el comando
+handler.command = /^(tiktok6)$/i;//variables de comando
 
 export default handler;
