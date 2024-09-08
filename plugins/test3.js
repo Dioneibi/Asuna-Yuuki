@@ -24,13 +24,13 @@ await m.react('🕓');//reacción al recibir el comando
        
 let txt = '';
 txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
-txt += `> _Autor_ : ${author || '❌'}\n`;
-txt += `> _Duración_ : ${duration || '❌'}\n`;
-txt += `> _Vistas_ : ${views || '❌'}\n`;
-txt += `> _Likes_ : ${like || '❌'}\n`; 
-txt += `> _Comentarios_ : ${comment || '❌'}\n`;
-txt += `> _Compartidos_ : ${share || '❌'}\n`;
-txt += `> _Publicado_ : ${published || '❌'}\n`;
+txt += `> 🤍 *\`» Autor :\`* ${author || '❌'}\n`;
+txt += `> 🤍 *\`» Duracion :\`* ${duration || '❌'}\n`;
+txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
+txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
+txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
+txt += `> 🤍 *\`» Share :\`* ${share || '❌'}\n`;
+txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n`;
 
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m);
