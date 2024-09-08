@@ -23,15 +23,14 @@ await m.react('🕓');//reacción al recibir el comando
         } = await ttdl(args[0]);//variables del resultado de 'ttdl'
        
 let txt = '';
-txt += "*`[ TIKTOK DOWNLOAD ]`*\n";
-txt += "> 🤍 *`» Título :`* ${title}\n";
-txt += "> 🤍 *`» Autor :`* ${author || '❌'}\n";
-txt += "> 🤍 *`» Duracion :`* ${duration || '❌'}\n";
-txt += "> 🤍 *`» Visitas :`* ${views || '❌'}\n";
-txt += "> 🤍 *`» Likes :`* ${like || '❌'}\n"; 
-txt += "> 🤍 *`» Comentarios :`* ${comment || '❌'}*\n";
-txt += "> 🤍 *`» Share :`* ${share || '❌'}\n";
-txt += "> 🤍 *`» Publicado :`* ${published || '❌'}\n";
+txt += `> _Título_ : *${title || '❌'}*\n`;
+txt += `> _Autor_ : *${author || '❌'}*\n`;
+txt += `> _Duración_ : *${duration || '❌'}*\n`;
+txt += `> _Vistas_ : *${views || '❌'}*\n`;
+txt += `> _Likes_ : *${like || '❌'}*\n`; 
+txt += `> _Comentarios_ : *${comment || '❌'}*\n`;
+txt += `> _Compartidos_ : *${share || '❌'}*\n`;
+txt += `> _Publicado_ : *${published || '❌'}*\n`;
 
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m);
