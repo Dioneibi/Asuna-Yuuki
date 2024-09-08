@@ -49,6 +49,6 @@ txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
 handler.help = ['tiktok *<link>*']
 handler.corazones = 3
 handler.tags = ['dl']
-handler.command = /^(tiktok4)$/i;
+handler.command = /^(tiktok)$/i;
 
 export default handler;
