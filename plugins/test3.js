@@ -33,7 +33,7 @@ txt += `> _Compartidos_ : *${share || '❌'}*\n`;
 txt += `> _Publicado_ : *${published || '❌'}*\n`;
 
 //video
-        await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m);
+        await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m);
 //audio
         await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
         await m.react('✅');//reacción al completar el proceso con éxito 
