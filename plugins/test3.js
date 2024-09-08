@@ -1,8 +1,8 @@
 import { ttdl } from 'ruhend-scraper';//modulo exportado para crear la variable 'ttdl'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {//variables del handler usadas 
- if (!args || !args[0]) return conn.reply(m.chat, '*`INGRESA EL LINK DE TIKTOK`*', m, fake, )//vuelve si no tiene un link
- if (!args[0].match(/tiktok/gi)) return conn.reply(m.chat, `Verifica que el link sea de TikTok`, m, fake).then(_ => m.react('✖️'))//verificar si el link es valido
+ if (!args || !args[0]) return conn.reply(m.chat, '*`INGRESA EL LINK DE TIKTOK`*', m, fake, )
+ if (!args[0].match(/tiktok/gi)) return conn.reply(m.chat, `Verifica que el link sea de TikTok`, m, fake).then(_ => m.react('✖️'))
     try {
 await m.react('🕓');//reacción al recibir el comando
         let {
@@ -33,20 +33,20 @@ txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
 txt += `> 🤍 *\`» Share :\`* ${share || '❌'}\n`;
 txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
 
-//video
+//VIDEO TIKTOK
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
-//audio
+//AUDIO TIKTOK
         await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
-        await m.react('✅');//reacción al completar el proceso con éxito 
+        await m.react('✅');
     } catch (e) {//salir si hay un error
-        await m.react('✖️');//reacción al fallar con el proceso 
-        console.log(e)//mostrar el error en la consola
+        await m.react('✖️');
+        console.log(e)
     }
 };
 
-handler.help = ['tiktok *<link>*']//exportar nombre de comando al menu
-handler.corazones = 3 //limites/corazones necesarios para usar el comandos
-handler.tags = ['dl']//menciones para agrupar el comando
-handler.command = /^(tiktok4)$/i;//variables de comando
+handler.help = ['tiktok *<link>*']
+handler.corazones = 3
+handler.tags = ['dl']
+handler.command = /^(tiktok4)$/i;
 
-export default handler;//exportación ESM
+export default handler;
