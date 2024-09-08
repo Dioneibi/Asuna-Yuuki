@@ -32,7 +32,6 @@ await m.react('✅')
   }
 }
 handler.help = ['tiktok2 *<link>*']
-handler.corazones = 2
 handler.tags = ['dl']
 handler.command = ['tiktok2']
 
