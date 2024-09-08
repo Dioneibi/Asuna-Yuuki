@@ -22,9 +22,9 @@ txt += `*\`[ TIKTOK MP3 ]\`*\n\n`;
     }
 };
 
-handler.help = ['tiktok *<link>*']
+handler.help = ['tiktokmp3 *<link>*']
 handler.corazones = 3
 handler.tags = ['dl']
-handler.command = /^(tiktok)$/i;
+handler.command = /^(tiktokmp3)$/i;
 
 export default handler;
