@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {//variables del
  if (!args || !args[0]) return conn.reply(m.chat, '*`INGRESA EL LINK DE TIKTOK`*', m, fake, )
  if (!args[0].match(/tiktok/gi)) return conn.reply(m.chat, `Verifica que el link sea de TikTok`, m, fake).then(_ => m.react('✖️'))
     try {
-await m.react('🕓');//reacción al recibir el comando
+await m.react('🕓');
         let {
             title,
             author,
