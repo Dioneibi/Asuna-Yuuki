@@ -23,7 +23,7 @@ await m.react('🕓');//reacción al recibir el comando
         } = await ttdl(args[0]);//variables del resultado de 'ttdl'
        
 let txt = '';
-txt += `> _Título_ : ${title || '❌'}\n`;
+txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
 txt += `> _Autor_ : ${author || '❌'}\n`;
 txt += `> _Duración_ : ${duration || '❌'}\n`;
 txt += `> _Vistas_ : ${views || '❌'}\n`;
