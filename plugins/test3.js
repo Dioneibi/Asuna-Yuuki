@@ -1,4 +1,4 @@
-import { ttdl } from 'ruhend-scraper';//modulo exportado para crear la variable 'ttdl'
+import { ttdl } from 'ruhend-scraper';
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {//variables del handler usadas 
  if (!args || !args[0]) return conn.reply(m.chat, '*`INGRESA EL LINK DE TIKTOK`*', m, fake, )
