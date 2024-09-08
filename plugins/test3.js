@@ -31,7 +31,7 @@ txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
 txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
 txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
 txt += `> 🤍 *\`» Share :\`* ${share || '❌'}\n`;
-txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n`;
+txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
 
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
