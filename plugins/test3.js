@@ -22,7 +22,8 @@ await m.react('🕓');//reacción al recibir el comando
             profilePicture
         } = await ttdl(args[0]);//variables del resultado de 'ttdl'
        
-let txt = '*`[ TIKTOK DOWNLOAD ]`*\n';
+let txt = '';
+txt += '*`[ TIKTOK DOWNLOAD ]`*\n';
 txt += '> 🤍 *`» Título :`* ${title || '❌'}\n';
 txt += '> 🤍 *`» Autor :`* ${author || '❌'}\n';
 txt += '> 🤍 *`» Duracion :`* ${duration || '❌'}\n';
