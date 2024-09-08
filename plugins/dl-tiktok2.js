@@ -9,7 +9,8 @@ let data = await tiktokdl(text)
 console.log(data)
   let start = Date.now();
   let sp = (Date.now() - start) + 'ms'
-  let cap = `🤍 *Descargado en:* ${sp}`
+  let cap = ``
+  let capp = `🤍 *Descargado en:* ${sp}`
   await m.react('🕓');
   await conn.sendMessage(m.chat, {
                     video: {
