@@ -21,9 +21,16 @@ await m.react('🕓');//reacción al recibir el comando
             music,
             profilePicture
         } = await ttdl(args[0]);//variables del resultado de 'ttdl'
-
-        let txt = '';//??
-        txt += ``;//??
+       
+let txt = '';
+txt += `> _Título_ : *${title || '❌'}*\n`;
+txt += `> _Autor_ : *${author || '❌'}*\n`;
+txt += `> _Duración_ : *${duration || '❌'}*\n`;
+txt += `> _Vistas_ : *${views || '❌'}*\n`;
+txt += `> _Likes_ : *${like || '❌'}*\n`; 
+txt += `> _Comentarios_ : *${comment || '❌'}*\n`;
+txt += `> _Compartidos_ : *${share || '❌'}*\n`;
+txt += `> _Publicado_ : *${published || '❌'}*\n`;
 
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', dev, m);
