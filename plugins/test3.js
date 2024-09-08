@@ -30,8 +30,8 @@ await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", f
 'isForwarded': true,
 externalAdReply:{
 showAdAttribution: false,
-title: `${title}`,
-body: `${author}`,
+title: ``,
+body: ``,
 mediaType: 2, 
 sourceUrl: `${url}`,
 thumbnail: await (await fetch(profilePicture)).buffer()}}}, { quoted: m })
