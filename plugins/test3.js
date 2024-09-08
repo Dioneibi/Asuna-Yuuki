@@ -24,7 +24,7 @@ await m.react('🕓');//reacción al recibir el comando
        
 let txt = '';
 txt += "*`[ TIKTOK DOWNLOAD ]`*\n";
-txt += "> 🤍 *`» Título :`* ${title || '❌'}\n";
+txt += "> 🤍 *`» Título :`* ${title}\n";
 txt += "> 🤍 *`» Autor :`* ${author || '❌'}\n";
 txt += "> 🤍 *`» Duracion :`* ${duration || '❌'}\n";
 txt += "> 🤍 *`» Visitas :`* ${views || '❌'}\n";
