@@ -36,18 +36,7 @@ txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
 //video
         await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
 //audio
-
-await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3', quoted: m, contextInfo: {
-'forwardingScore': 200,
-'isForwarded': true,
-externalAdReply:{
-showAdAttribution: false,
-title: `${title}`,
-body: ``,
-mediaType: 2, 
-sourceUrl: `${canal}`,
-thumbnail: 'https://tinyurl.com/245mnfeh'})
-
+        await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
         await m.react('✅');//reacción al completar el proceso con éxito 
     } catch (e) {//salir si hay un error
         await m.react('❌');//reacción al fallar con el proceso 
