@@ -23,7 +23,7 @@ await m.react('🕓');//reacción al recibir el comando
         } = await ttdl(args[0]);//variables del resultado de 'ttdl'
        
 let txt = '*`[ TIKTOK DOWNLOAD ]`*\n';
-txt += `> 🤍 *`» Título :`* ${title || '❌'}\n`;
+txt += '> 🤍 *`» Título :`* ${title || '❌'}\n';
 txt += `> 🤍 *`» Autor :`* ${author || '❌'}\n`;
 txt += `> 🤍 *`» Duracion :`* ${duration || '❌'}\n`;
 txt += `> 🤍 *`» Visitas :`* ${views || '❌'}\n`;
