@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
         break;
     }
 
-    rioo.sendMessage(from, { image: { url: imgg }, caption: cap }, { quoted: m });
+    conn.sendMessage(m.chat, { image: { url: imgg }, caption: cap }, { quoted: m });
     return;
   }
 
