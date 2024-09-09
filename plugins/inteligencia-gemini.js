@@ -9,7 +9,19 @@ let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/gemini?t
 let json = await api.json()
 
 if (json.status === 'true') {
-await conn.reply(m.chat, json.result, m)
+await conn.sendMessage(m.chat, {
+text: json.result,
+contextInfo: {
+externalAdReply: {
+title: '[ 𝗖 𝗢 𝗣 𝗜 𝗟 𝗢 𝗧 ]',
+body: '©𝟐𝟎𝟐𝟒 𝐀𝐧𝐠𝐞𝐥𝐢𝐭𝐨-𝐎𝐅𝐂',
+thumbnailUrl: 'https://tinyurl.com/27pcefrx',
+sourceUrl: canal,
+mediaType: 1,
+renderLargerThumbnail: true
+}}},
+{ quoted: m})
+
 } else {
 conn.reply('error :v')
 }
