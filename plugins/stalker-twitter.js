@@ -20,6 +20,8 @@ conn.reply('error :v')
 }
 }
 
+handler.help = ['twitterstalk <username>']
+handler.tags = ['fun']
 handler.command = ['twitterstalk']
 
 export default handler
