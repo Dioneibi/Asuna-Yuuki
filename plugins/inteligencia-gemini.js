@@ -19,7 +19,7 @@ conn.reply('error :v')
 }
 
 handler.help = ['gemini <texto>'];
-handler.tags = ['anime'];
+handler.tags = ['ai'];
 handler.command = ['gemini']
 
 export default handler
