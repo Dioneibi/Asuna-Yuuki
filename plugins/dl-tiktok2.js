@@ -28,14 +28,7 @@ await conn.sendMessage(m.chat, {
                 }, {
                     quoted: m
                 })
-await conn.sendMessage(m.chat, {
-                    audio: {
-                        url: data.audio.url
-                    },
-                    caption: 
-                }, {
-                    quoted: m
-                })
+        await conn.sendMessage(m.chat, { audio: { url: data.audio.url }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
 await m.react('✅')
   } catch {
     await m.react('✖️')
