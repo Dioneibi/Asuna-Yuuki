@@ -15,7 +15,7 @@ contextInfo: {
 externalAdReply: {
 title: '[ 𝗖 𝗢 𝗣 𝗜 𝗟 𝗢 𝗧 ]',
 body: '©𝟐𝟎𝟐𝟒 𝐀𝐧𝐠𝐞𝐥𝐢𝐭𝐨-𝐎𝐅𝐂',
-thumbnailUrl: 'https://tinyurl.com/27pcefrx',
+thumbnailUrl: 'https://ibb.co/2Z6Gg0w',
 sourceUrl: canal,
 mediaType: 1,
 renderLargerThumbnail: true
