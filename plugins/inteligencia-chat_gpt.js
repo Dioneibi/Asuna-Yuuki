@@ -18,7 +18,8 @@ conn.reply('error :v')
 }
 }
 
-
+handler.help = ['chatgpt <texto>'];
+handler.tags = ['ai'];
 handler.command = /^(chatgpt)$/i
 
 export default handler
