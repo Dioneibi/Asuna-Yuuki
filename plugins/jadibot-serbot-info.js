@@ -17,7 +17,7 @@ const responseMessage = `${`*\`S E R B O T - S U B B O T S\`*\n\n${replyMessage.
 
 let img = await (await fetch(`https://i.ibb.co/0FXmhvX/file.jpg`)).buffer()
 
-await _envio.sendFile(m.chat, img, 'thumbnail.jpg', responseMessage, m, false, { mentions: _envio.parseMention(responseMessage) })
+await _envio.sendFile(m.chat, img, 'thumbnail.jpg', responseMessage, m, fake, false, { mentions: _envio.parseMention(responseMessage) })
 }
 handler.command = ['listjadibot', 'bots']
 handler.help = ['bots']
