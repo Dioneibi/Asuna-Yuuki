@@ -32,7 +32,7 @@ await conn.sendMessage(m.chat, {
                     audio: {
                         url: data.audio.url
                     },
-                    caption: capp
+                    caption: 
                 }, {
                     quoted: m
                 })
