@@ -15,6 +15,8 @@ conn.reply('error :v')
 }
 }
 
+handler.help = ['transcriptyt'];
+handler.tags = ['fun'];
 handler.command = ['transcriptyt']
 
 export default handler
