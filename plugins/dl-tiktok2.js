@@ -18,7 +18,7 @@ console.log(data)
                     },
                     caption: cap
                 }, {
-                    quoted: m
+                    quoted: m, null, rcanal
                 })
 await conn.sendMessage(m.chat, {
                     video: {
