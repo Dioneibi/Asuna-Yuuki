@@ -8,7 +8,7 @@ try {
 let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/transcribir-youtube?url=${text}`)
 let json = await api.json()
 
-await conn.reply(m.chat, json.result, m)
+await conn.reply(m.chat, json.result, m, rcanal)
 
 } catch {
 conn.reply('error :v')
