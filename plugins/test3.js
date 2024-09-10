@@ -64,7 +64,8 @@ let handler = async (m, {
 }
 handler.help = ['cocofun'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^snap(chat|dl)$/i
+handler.command = ['snapchatdl']
+
 export default handler
 
 async function getSnapchatVideo(url) {
