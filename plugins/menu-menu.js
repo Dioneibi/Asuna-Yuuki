@@ -3,6 +3,8 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
+let role = m.isGroup ? 'group' : 'private';
+
 let tags = {
   'main': '𝐈𝐍𝐅𝐎 𝐁𝐎𝐓',
   'buscador': '𝐁𝐔𝐒𝐐𝐔𝐄𝐃𝐀𝐒',
