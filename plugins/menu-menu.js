@@ -31,13 +31,13 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `“𝐇𝐨𝐥𝐚 *%name* 𝐒𝐨𝐲 𝐀𝐳𝐮𝐧𝐚 𝐘𝐮𝐮𝐤𝐢 𝐁𝐨𝐭, %greeting"
+  before: `“𝐇𝐨𝐥𝐚 *%name* 𝐒𝐨𝐲 𝐆𝐞𝐧𝐞𝐬𝐢𝐬𝐁𝐨𝐭, %greeting"
 
 ✧ ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬ ✧ 
 
  '︶꒦꒷♡꒷꒦︶.
 ┊✶ 𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
-┊┊✶ 𝐁𝐨𝐭: Azuna Yuuki Bot
+┊┊✶ 𝐁𝐨𝐭: Génesis Bot
 ┊┊✶ 𝐌𝐨𝐝𝐨: Público
 ┊┊✶ 𝐓𝐢𝐞𝐦𝐩𝐨 𝐚𝐜𝐭: %muptime
 ┊┊✶ 𝐔𝐬𝐞𝐫𝐬: %totalreg
@@ -47,18 +47,12 @@ const defaultMenu = {
 
 ✦•····················•✦•···················•✦
 `.trimStart(),
-  header: '✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭*•̩̩͙✩•̩̩͙*˚୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙\n╠ • ˗ˏ✎*ೃ `%category`\n╠ ┈──✦﹀﹀|﹀﹀﹕₊˚ ✧. *. ⋆\n╠ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈',
+  header: '✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭*•̩̩͙✩•̩̩͙*˚୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙\n╠ • ˗ˏ✎*ೃ `%category`\n╠ ┈──✦﹀﹀|﹀﹀﹕₊˚ ✧. *. ⋆\n╠ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈',
   body: '║✶ %cmd %isdiamond %isPremium\n',
   footer: '╚════•.·:·.✧ ✦ ✧.·:·.*•════╝\n\n',
   after: ``,
 }
-
-let gifs = [
-  'https://qu.ax/UVih.mp4',
-  'https://qu.ax/qlrl.mp4',
-  'https://qu.ax/ZifQ.mp4'
-]
-
+let ppp = 'https://qu.ax/UVih.mp4'
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
@@ -124,8 +118,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%isdiamond/g, menu.corazones ? '💎' : '')
-                .replace(/%isPremium/g, menu.premium ? '🎟️' : '')
+                .replace(/%isdiamond/g, menu.diamond ? '◜🪙◞' : '')
+                .replace(/%isPremium/g, menu.premium ? '◜🎫◞' : '')
                 .trim()
             }).join('\n')
           }),
@@ -134,33 +128,61 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       }),
       after
     ].join('\n')
-    let replace = {
-      '%': '%',
-      p: _p, uptime,
-      muptime,
-      me: conn.user.name,
-      exp: exp - min,
-      maxexp: xp,
-      totalexp: exp,
-      xp4levelup: max - exp,
-      level, corazones, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
-      readmore: readMore
-    }
-    text = _text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join('|')})`, 'g'), (_, name) => '' + replace[name])
-    let gif = gifs[Math.floor(Math.random() * gifs.length)]
-    conn.sendFile(m.chat, gif, 'menu.mp4', text.trim(), m)
+    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+let replace = {
+'%': '%',
+p: _p, uptime, muptime,
+me: conn.getName(conn.user.jid),
+taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
+npmname: _package.name,
+npmdesc: _package.description,
+version: _package.version,
+exp: exp - min,
+maxexp: xp,
+botofc: (conn.user.jid == global.conn.user.jid ? '🚩 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `🚩 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
+totalexp: exp,
+xp4levelup: max - exp,
+github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+greeting, level, corazones, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+readmore: readMore
+}
+text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+
+const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/327f6ad853cb4f405aa80.jpg')
+
+  let category = "video"
+  const db = './media/database/db.json'
+  const db_ = JSON.parse(fs.readFileSync(db))
+  const random = Math.floor(Math.random() * db_.links[category].length)
+  const rlink = db_.links[category][random]
+  global.vid = rlink
+  const response = await fetch(vid)
+  const gif = await response.buffer()
+ // const img = imagen1
+
+await m.react('🤍') 
+await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲 𝗹𝗮 𝗕𝗼𝘁...𓏲੭*', fakegif3, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: '🤍 ¡Génesis la mejor Bot!', sourceUrl: canal, thumbnail: icons }}})
+
+// await conn.reply(m.chat, '🍟 Enviando el menú.....', m, rcanal)
+
+await conn.sendFile(m.chat, ppp, 'menu.jpg', text.trim(), fakegif3, null, fake)
+
   } catch (e) {
-    conn.reply(m.chat, 'Sorry, the menu is experiencing an error', m)
+    conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
     throw e
   }
 }
-
 handler.help = ['menucompleto']
 handler.tags = ['main']
 handler.command = ['menucompleto', 'allmenú', 'allmenu'] 
 handler.register = true
 
 export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 
 function clockString(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
