@@ -27,7 +27,7 @@ global.mods = []
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
 global.packname = '✦⃟⛧┋ ➪ _ＡＳＵＮＡ ⛧ ＹＵＵＫＩ_ 🌸┋⃟✧'
-global.author = '@usxr_angelito0'
+global.author = '𖤐⛧✠ ➪ ＪＯＳＥ ⚔ ＸＲＬ 𖤐✠⛧'
 global.wm = '𝗚𝗲𝗻𝗲𝘀𝗶𝘀 𝗣𝗿𝗼'
 global.titulowm = 'GenesisBot-Pro 🤍'
 global.titulowm2 = ''
