@@ -33,7 +33,7 @@ global.titulowm = '✨✰ Asuna Yuuki ✰ - MD🌸'
 global.titulowm2 = ''
 global.igfg = '⌘ Modified by: 𝘑𝘰𝘴𝘦 𝘟𝘳𝘭 ⌘ 💻'
 global.botname = '✧✩ *Asuna Yuuki* ✩✧'
-global.dev = '`𝗚𝗲𝗻𝗲𝘀𝗶𝘀𝗕𝗼𝘁 🤍`\n*By • Titanium Team 💥*'
+global.dev = '`✧･ﾟ: 𝐀𝐬𝐮𝐧𝐚 𝐘𝐮𝐮𝐤𝐢 ✧･ﾟ:\n┃ 𝓑𝔂 ⋆ Dioneibi - José Xrl 💥'
 global.textbot = '𝗚𝗲𝗻𝗲𝘀𝗶𝘀𝗕𝗼𝘁 : 𝗔𝗻𝗴𝗲𝗹𝗶𝘁𝗼 🤍'
 global.vs = '1.4.0'
 
