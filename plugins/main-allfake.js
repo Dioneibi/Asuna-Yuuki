@@ -106,11 +106,11 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 }}, { quoted: m }
 
 global.icono = [ 
-'https://qu.ax/fwKv.jpg',
-'https://qu.ax/feut.jpg',
-'https://qu.ax/utMX.jpg',
-'https://qu.ax/fwKv.jpg',
-'https://qu.ax/sTvd.jpg',
+'https://qu.ax/zUUy.jpeg',
+'https://qu.ax/KJrp.jpeg',
+'https://qu.ax/wtVo.jpeg',
+'https://qu.ax/DYsL.jpeg',
+'https://qu.ax/lVWo.jpeg',
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363220939514640@newsletter", serverMessageId: 100, newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑩𝒐𝒕 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍', }, externalAdReply: { showAdAttribution: true, title: packname, body: '🤍 ¡Génesis Super Bot!', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
