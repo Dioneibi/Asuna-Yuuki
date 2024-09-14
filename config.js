@@ -14,14 +14,14 @@ global.confirmCode = ''
 
 //• ↳𝑺𝑶𝑳𝑶 𝑫𝑬𝑺𝑨𝑹𝑹𝑶𝑳𝑳𝑨𝑫𝑶𝑹𝑬𝑺 𝑨𝑷𝑹𝑶𝑩𝑨𝑫𝑶𝑺
 global.owner = [
-['51902931437', 'Jose Xrl 🌸', true],
-['18294868853', 'Dioneibi 🌸', true],
-[''],
+['51950148255', 'Jᴏsᴇ Xʀʟ', true],
+['18294868853', 'Cᴏʟᴀʙᴏʀᴀᴅᴏʀ 🥛', true],
+['595972157130', 'Cᴏʟᴀʙᴏʀᴀᴅᴏʀ 2 💥', true],
 [''],
 [''],
 ['']]
 
-global.suittag = ['51902931437']
+global.suittag = ['51950148255']
 global.prems = []
 global.mods = []
 
@@ -44,27 +44,27 @@ global.imagen3 = fs.readFileSync('./Menu3.jpg')
 global.catalogo = fs.readFileSync('./media/catalogo.jpg')
 
 //• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝗚𝗲𝗻𝗲𝘀𝗶𝘀𝗕𝗼𝘁-𝗠𝗗', orderTitle: 'packname', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝗔𝘀𝘂𝗻𝗮𝗬𝘂𝘂𝗸𝗶', orderTitle: 'packname', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Megumin', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𖥔.𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨❞ ꔷ──᜔◇⃟̣̣⃕✨', jpegThumbnail: catalogo }}};
+global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Jose_Xrl', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𖥔.𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨❞ ꔷ──᜔◇⃟̣̣⃕✨', jpegThumbnail: catalogo }}};
 
-global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Megumin', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖ɢ ᴇ ɴ ᴇ ꜱ ɪ ꜱ ♡', jpegThumbnail: catalogo }}};
+global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Jose_Xrl', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: 'Asᴜɴᴀ Yᴜᴜᴋɪ', jpegThumbnail: catalogo }}};
 
-global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Megumin', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𝐒𝐭𝐢𝐜𝐤𝐞𝐫 (^_^♪) 💥', jpegThumbnail: catalogo }}};
+global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'Jose_Xrl', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𝐒𝐭𝐢𝐜𝐤𝐞𝐫 (^_^♪) 💥', jpegThumbnail: catalogo }}};
 
-global.estilox = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '⏤͟͞ू⃪ ፝͜⁞M͢ᴇɢ፝֟ᴜᴍ⃨ɪɴ⃜✰⃔࿐', orderTitle: 'packname', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilox = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '⏤͟͞ू⃪ ፝͜⁞Jᴏsᴇ Xʀʟ✰⃔࿐', orderTitle: 'packname', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.id_canal = '120363220939514640@newsletter' //-ID de canal de WhatsApp
-global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y' //CANAL GENESIS
-global.canal2 = 'https://whatsapp.com/channel/0029VafjvaaEgGfOe5KdmX1n' //CANAL TITANIUM TEAM
-global.bgp = 'https://chat.whatsapp.com/LcFTUnvu0Tw1tCnA2ybdR6' //GRUPO DE AVISOS
-global.bgp2 = 'https://chat.whatsapp.com/EVl0wxlCww74HV3vvZq83a' //GRUPO GLOBAL 1
-global.bgp3 = 'https://chat.whatsapp.com/DVt1mhZ6H7EIpt4lmjURwq' //GRUPO GLOBAL 2
-global.bgp4 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU' //GRUPO NSFW
-global.md = 'https://github.com/Angelito-OFC/Genesis-OFC' //Github Oficial
-global.ig = 'https://www.instagram.com/usxr_angelito0' //Ig Oficial
-global.correo = 'agasistencia2@gmail.com'
+global.id_canal = '0029Vah2mhq6BIEZRroXx737@newsletter' //-ID de canal de WhatsApp
+global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y' //CANAL ASUNA YUUKI
+global.canal2 = 'https://whatsapp.com/channel/0029VaYh3Zm4dTnQKQ3VLT0h' //CANAL GOKU BLACK
+global.bgp = 'https://chat.whatsapp.com/EyIKeHl16JNB4J6O4KMjpD' //GRUPO ASUNA YUUKI
+global.bgp2 = 'https://chat.whatsapp.com/ETIiqEsDfpiFepKjQEDi3O' //GRUPO GOKU BLACK
+global.bgp3 = 'https://chat.whatsapp.com/GD0al1LF7Ux2dmPF0fDFYZ' //GRUPO GOKU BKACK LITE
+global.bgp4 = 'https://chat.whatsapp.com/EwtaaShQF0l4DRch5EPB3g' //COMUNIDAD
+global.md = 'https://github.com/Dioneibi/Asuna-Yuuki' //Github Oficial
+global.ig = 'https://www.instagram.com/xrljose' //Ig Oficial
+global.correo = 'tigresitocazador@gmail.com'
 
 //• ↳ ◜𝑻𝑰𝑬𝑴𝑷𝑶◞ • 🕒
 global.d = new Date(new Date + 3600000);
@@ -75,8 +75,8 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `${dia} ${fecha}\nYaemori`;
-global.nomorown = '573012482597';
+global.wm2 = `${dia} ${fecha}\nYuuki`;
+global.nomorown = '51950148255';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
@@ -160,7 +160,7 @@ global.rpg = {
     string = string.toLowerCase();
     const emot = {
       level: '🧬 Nivel',
-      Dolares: '💵 dolares',
+      corazones: '🤍 Corazon',
       exp: '⚡ Experiencia',
       bank: '🏦 Banco',
       diamond: '💎 Diamante',
@@ -253,7 +253,7 @@ global.rpgg = { // Solo emojis
     string = string.toLowerCase();
     const emott = {
       level: '🧬',
-      dolares: '💵',
+      corazones: '🤍',
       exp: '⚡',
       bank: '🏦',
       diamond: '💎+',
@@ -346,15 +346,15 @@ global.rpgshop = { // Tienda
     string = string.toLowerCase();
     const emottt = {
       exp: '⚡ Experiencia',
-      Dolares: '💵 dolar',
+      corazones: '🤍 Corazon',
       diamond: '💎 Diamante',
       joincount: '💰 Token',
       emerald: '💚 Esmeralda',
       berlian: '♦️ Joya',
       kyubi: '🌀 Magia',
       gold: '👑 Oro',
-      money: '👾 YuukiCoins',
-      tiketcoin: '🎫 Yuuki Tickers',
+      money: '👾 GeneCoins',
+      tiketcoin: '🎫 Mini Tickers',
       stamina: '✨ Energía',
       potion: '🥤 Poción',
       aqua: '💧 Agua',
@@ -423,7 +423,7 @@ global.rpgshopp = { // Tienda
     string = string.toLowerCase();
     const emotttt = {
       exp: '⚡',
-      dolares: '💵',
+      corazones: '🤍',
       diamond: '💎+',
       joincount: '💰',
       emerald: '💚',
@@ -502,3 +502,4 @@ watchFile(file, () => {
   console.log(chalk.redBright('Update \'config.js\''));
   import(`${file}?update=${Date.now()}`);
 });
+  
