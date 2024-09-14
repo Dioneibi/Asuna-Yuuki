@@ -47,7 +47,7 @@ m = smsg(this, m) || m
 if (!m)
 return
 m.exp = 0
-m.corazones = false
+m.Dolares = false
 m.money = false
 try {
 // TODO: use loop to insert data instead of this
@@ -65,7 +65,7 @@ if (!('premium' in user)) user.premium = false
 if (!('muto' in user)) user.muto = false
 if (!isNumber(user.joincount)) user.joincount = 1
 if (!isNumber(user.money)) user.money = 150
-if (!isNumber(user.corazones)) user.corazones = 20
+if (!isNumber(user.corazones)) user.Dolares = 20
 if (!('registered' in user)) user.registered = false
 
 if (!user.registered) {
