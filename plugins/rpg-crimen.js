@@ -12,36 +12,36 @@ m.reply(`🤍 Ya has cometido un Crimen recientemente, espera ⏱️ *${tiempo2}
 return
 }
 cooldowns[m.sender] = Date.now()
-let senderCorazones = users[senderId].estrellas || 0
+let senderDolares = users[senderId].estrellas || 0
 let randomUserId = Object.keys(users)[Math.floor(Math.random() * Object.keys(users).length)]
 while (randomUserId === senderId) {
 randomUserId = Object.keys(users)[Math.floor(Math.random() * Object.keys(users).length)]}
-let randomUserCorazones = users[randomUserId].corazones || 0
+let randomUserCorazones = users[randomUserId].Dolares || 0
 let minAmount = 15
 let maxAmount = 50
 let amountTaken = Math.floor(Math.random() * (maxAmount - minAmount + 1)) + minAmount
 let randomOption = Math.floor(Math.random() * 3)
 switch (randomOption) {
 case 0:
-users[senderId].corazones += amountTaken
-users[randomUserId].corazones -= amountTaken
+users[senderId].Dolares += amountTaken
+users[randomUserId].Dolares -= amountTaken
 conn.sendMessage(m.chat, {
-text: `🤍¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 🤍 Corazones* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 🤍 Corazones* a ${senderName}.`,
+text: `🤍¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} 💵 Dolares* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} 💵 Dolares* a ${senderName}.`,
 contextInfo: { 
 mentionedJid: [randomUserId],
 }}, { quoted: m })
 break
 case 1:
 let amountSubtracted = Math.min(Math.floor(Math.random() * (senderCorazones - minAmount + 1)) + minAmount, maxAmount)
-users[senderId].corazones -= amountSubtracted
-conn.reply(m.chat, `🤍 No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 🤍 Corazones* a ${senderName}.`, m, rcanal)
+users[senderId].Dolares -= amountSubtracted
+conn.reply(m.chat, `🤍 No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} 💵 Dolares* a ${senderName}.`, m, rcanal)
 break
 case 2:
 let smallAmountTaken = Math.min(Math.floor(Math.random() * (randomUserCorazones / 2 - minAmount + 1)) + minAmount, maxAmount)
-users[senderId].corazones += smallAmountTaken
-users[randomUserId].corazones -= smallAmountTaken
+users[senderId].Dolares += smallAmountTaken
+users[randomUserId].Dolares -= smallAmountTaken
 conn.sendMessage(m.chat, {
-text: `🤍 Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} 🤍 Corazones* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 🤍 Corazones* a ${senderName}.`,
+text: `🤍 Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} ✨ Dolares* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} 💵 Dolares* a ${senderName}.`,
 contextInfo: { 
 mentionedJid: [randomUserId],
 }}, { quoted: m })
