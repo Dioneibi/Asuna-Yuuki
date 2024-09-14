@@ -521,8 +521,8 @@ await plugin.after.call(this, m, extra)
 } catch (e) {
 console.error(e)
 }}
-if (m.corazones)
-conn.reply(m.chat, `Utilizaste *${+m.corazones}* 🤍`, m, fake)
+if (m.Dolares)
+conn.reply(m.chat, `Utilizaste *${+m.Dolares}* 💵`, m, fake)
 }
 if (m.money)
 conn.reply(m.chat, `Utilizaste *${+m.money}* 💰`, m, fake)
