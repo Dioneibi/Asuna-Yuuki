@@ -7,18 +7,18 @@ import cfonts from 'cfonts';
 import { createInterface } from 'readline';
 import yargs from 'yargs';
 import chalk from 'chalk';
-console.log('\n✰ Iniciando Génesis ✰');
+console.log('\n✰ Iniciando Asuna Yuuki ✰');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
 const { name, description, author, version } = require(join(__dirname, './package.json'));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
-say('Genesis\nBot', {
+say('Asuna Yuuki\nBot', {
 font: 'block',
 align: 'center',
 colors: ['white']
 });
-say(`By • Angel OFC`, {
+say(`By • Jose Xrl`, {
 font: 'console',
 align: 'center',
 colors: ['yellow']
@@ -72,4 +72,4 @@ console.warn('🤍 Se excedió el límite de Listeners en:');
 console.warn(warning.stack);
 }
 });
-start('mini.js');
+start('Yuuki.js');
