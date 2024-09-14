@@ -496,7 +496,7 @@ __filename
 try {
 await plugin.call(this, m, extra)
 if (!isPrems)
-m.corazones = m.corazones || plugin.corazones || false
+m.Dolares = m.Dolares || plugin.Dolares || false
 m.money = m.money || plugin.money || false
 } catch (e) {
 // Error occured
