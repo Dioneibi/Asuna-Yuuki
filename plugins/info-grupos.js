@@ -1,7 +1,7 @@
 
 let handler = async (m, { conn, command, usedPrefix }) => {
 let pp = 'https://i.ibb.co/YcdFyft/file.jpg'
-m.react('🤍')
+m.react('🌸')
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
 let _muptime
@@ -9,26 +9,26 @@ if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
-let estado = `᥀·࣭࣪̇˖☁️◗ 𝘊𝘈𝘕𝘈𝘓:
+let estado = `᥀·࣭࣪̇˖🎋◗ 𝘊𝘈𝘕𝘈𝘓 𝘠𝘜𝘜𝘒𝘐:
 • ${canal}
 
-᥀·࣭࣪̇˖☁️◗ 𝘛𝘐𝘛𝘈𝘕𝘐𝘜𝘔 𝘛𝘌𝘈𝘔:
+᥀·࣭࣪̇˖🎋◗ 𝘊𝘈𝘕𝘈𝘓.𝘎𝘖𝘒𝘜 𝘉𝘓𝘈𝘊𝘒:
 • ${canal2}
 
-᥀·࣭࣪̇˖☁️◗ 𝘈𝘝𝘐𝘚𝘖𝘚 🛎️:
+᥀·࣭࣪̇˖🎋◗ 𝘎𝘙𝘜𝘗𝘖 𝘖𝘍𝘊 𝘈𝘚𝘜𝘕𝘈 𝘠𝘜𝘜𝘒𝘐:
 • ${bgp} 
 
-᥀·࣭࣪̇˖☁️◗ 𝘎𝘓𝘖𝘉𝘈𝘓 1️⃣:
+᥀·࣭࣪̇˖🎋◗ 𝘎𝘖𝘒𝘜 𝘉𝘓𝘈𝘊𝘒 𝘉𝘖𝘛:
 • ${bgp2}
 
-᥀·࣭࣪̇˖☁️◗ 𝘎𝘓𝘖𝘉𝘈𝘓 2️⃣:
+᥀·࣭࣪̇˖🎋◗ 𝘎𝘖𝘒𝘜 𝘉𝘓𝘈𝘊𝘒 𝘓𝘐𝘛𝘌:
 • ${bgp3}
 
-᥀·࣭࣪̇˖☁️◗ 𝘕𝘚𝘍𝘞 +18:
+᥀·࣭࣪̇˖🎋◗ 𝘊𝘖𝘔𝘜𝘕𝘐𝘋𝘈𝘋:
 • ${bgp4}
 `
-await conn.sendButton(m.chat, estado, '@usxr_angelito0', pp, [
-['DUEÑO 🤍', '.owner'], ['DONAR 🫧', '.donate']], null, [['CANAL 🐈‍⬛', `${canal}`]], m)
+await conn.sendButton(m.chat, estado, '@xrljose', pp, [
+['DUEÑO 🌩️', '.owner'], ['DONAR 🫧', '.donate']], null, [['CANAL 🐈‍⬛', `${canal}`]], m)
 }
 handler.help = ['grupos']
 handler.tags = ['info']
@@ -41,3 +41,4 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+  
