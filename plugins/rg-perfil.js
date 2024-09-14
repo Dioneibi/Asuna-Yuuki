@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 var handler = async (m, { conn }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let pp = 'https://telegra.ph/file/16ef6893f54e4732ee062.jpg'
-let { premium, level, corazones, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[m.sender]
+let { premium, level, Dolares, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[m.sender]
 let username = conn.getName(who)
 let noprem = `
 👤 *PERFIL DE USUARIO*
@@ -12,7 +12,7 @@ let noprem = `
 🪼 *Registrado:* ${registered ? '✅': '❌'}
 
 🧰 *RECURSOS*
-🤍 *Corazones:* ${corazones}
+💵 *Dolares:* ${Dolares}
 💥 *Nivel:* ${level}
 💫 *Experiencia:* ${exp}
 ✨️ *Rango:* ${role}
@@ -26,7 +26,7 @@ let prem = `╭──⪩ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐏𝐑𝐄𝐌𝐈𝐔�
 ╰───⪨
 
 ╭────⪩ 𝐑𝐄𝐂𝐔𝐑𝐒𝐎𝐒 ⪨
-│⧼🤍⧽ *Corazones:* ${corazones}
+│⧼💵⧽ *Dolares:* ${Dolares}
 │⧼🔰⧽ *ɴɪᴠᴇʟ:* ${level}
 │⧼💫⧽ *ᴇxᴘᴇʀɪᴇɴᴄɪᴀ:* ${exp}
 │⧼⚜️⧽ *ʀᴀɴɢᴏ:* ${role}
