@@ -2,7 +2,7 @@ let handler = async (m, { conn, args, participants }) => {
 let users = Object.entries(global.db.data.users).map(([key, value]) => {
 return {...value, jid: key}})
 let sortedExp = users.map(toNumber('exp')).sort(sort('exp'))
-let sortedLim = users.map(toNumber('corazones')).sort(sort('corazones'))
+let sortedLim = users.map(toNumber('Dolares')).sort(sort('Dolares'))
 let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
 let usersExp = sortedExp.map(enumGetKey)
 let usersLim = sortedLim.map(enumGetKey) 
