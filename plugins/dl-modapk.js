@@ -16,7 +16,7 @@ const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
   }    
 };
 handler.help = ["apk <name>"]
-handler.corazones = 2
+handler.Dolares = 2
 handler.tags = ["dl"]
 handler.command = /^(apk|modapk|dapk2|aptoide|aptoidedl)$/i;
 export default handler;
