@@ -14,7 +14,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['likeedl *<url>*']
-handler.corazones = 2
+handler.Dolares = 2
 handler.tags = ['dl']
 handler.command = /^(likeedl)$/i
 handler.register = true
