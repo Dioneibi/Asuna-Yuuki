@@ -1,5 +1,5 @@
 # 🪄᛫᪽᪵᪱ᮀ © Asᴜɴᴀ Yᴜᴜᴋɪ Bᴏᴛ ∘⋄☆
-Bienbenido a Asuna Yuuki soy una bot de WhatsApp diceñada para : Entretener , dar información , Descargar musicas , crear imagenes , ect
+Bienvenido a Asuna Yuuki soy una bot de WhatsApp diceñada para : Entretener , dar información , Descargar musicas , crear imagenes , ect
 
 UN AGRADECIMIENTO MUY ESPECIAL A ESTE CABALLERO [@Ivanmods15](https://github.com/Ivanmods15]) QUÉ ME AYUDÓ EN ESTE PROYECTO.
 
