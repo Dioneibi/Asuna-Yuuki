@@ -3,61 +3,77 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-let tags = {
-  'main': '𝐈𝐍𝐅𝐎 𝐁𝐎𝐓',
-  'buscador': '𝐁𝐔𝐒𝐐𝐔𝐄𝐃𝐀𝐒',
-  'search': '𝐒𝐄𝐀𝐑𝐂𝐇',
-  'game': '𝐃𝐈𝐕𝐄𝐑𝐒𝐈𝐎𝐍',
-  'jadibot': '𝐒𝐔𝐁 𝐁𝐎𝐓𝐒',
-  'rpg': '𝐑𝐏𝐆',
-  'rg': '𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎',
-  'xp': '𝐄𝐗𝐏',
-  'sticker': '𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒',
-  'anime': '𝐀𝐍𝐈𝐌𝐄𝐒',
-  'database': '𝐃𝐀𝐓𝐀𝐁𝐀𝐒𝐄',
-  'fix': '𝐅𝐈𝐗𝐌𝐒𝐆𝐄𝐒𝐏𝐄𝐑𝐀',
-  'grupo': '𝐆𝐑𝐔𝐏𝐎𝐒',
-  'nable': '𝐎𝐍 / 𝐎𝐅𝐅', 
-  'dl': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
-  'fun': '𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒',
-  'info': '𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍',
-  'nsfw': '𝐍𝐒𝐅𝐖', 
-  'owner': '𝐂𝐑𝐄𝐀𝐃𝐎𝐑',
-  'mods': '𝐒𝐓𝐀𝐅𝐅',
-  'audio': '𝐀𝐔𝐃𝐈𝐎𝐒', 
-  'ai': '𝐀𝐈 𝐁𝐎𝐓',
-  'convertir': '𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑𝐄𝐒',
-  'audios': '𝐀𝐔𝐃𝐈𝐎𝐒',
+let Styles = (text, style = 1) => {
+  var xStr = 'abcdefghijklmnopqrstuvwxyz1234567890'.split('');
+  var yStr = Object.freeze({
+    1: 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘqʀꜱᴛᴜᴠᴡxʏᴢ1234567890'
+  });
+  var replacer = [];
+  xStr.map((v, i) => replacer.push({
+    original: v,
+    convert: yStr[style].split('')[i]
+  }));
+  var str = text.toLowerCase().split('');
+  var output = [];
+  str.map(v => {
+    const find = replacer.find(x => x.original == v);
+    find ? output.push(find.convert) : output.push(v);
+  });
+  return output.join('');
 };
 
-const defaultMenu = {
-  before: `𑁯ᰍ🌸ᩥ ꎾ ✰ ♡⁀➷𝐀𝐬𝐮𝐧𝐚 𝐘𝐮𝐮𝐤𝐢➹⁀♡ ✰ 𑁯ᰍ🌸ᩥ ꎾ
-  
-  “𝐇𝐨𝐥𝐚 *%name* 𝐒𝐨𝐲 𝐀𝐬𝐮𝐧𝐚 𝐘𝐮𝐮𝐤𝐢, %greeting"
-
-╔═══════⩽🌸ᩥ⩾═══════╗
-║     	𝐈 𝐍 𝐅 𝐎 - 𝐔 𝐒 𝐄 𝐑
-╚═══════⩽🌸ᩥ⩾═══════╝
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Nombre*:%name
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Bot*: Asuna Yuuki Bot
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Modo:* publico
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Tiempo Activo*:%muptime
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Usuarios*:%totalreg
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *dolares*:💵 %Dolares
-- ෨᷐፝֟ - 🌸ᩧ͜   ݁.ꉹ᷐፝֟ꉹ *Nivel*:%level
-
-*✧━─━─✰──✧ - ✧──✰─━─━✧*
-`.trimStart(),
-header: '╔═══════⩽🌸ᩥ⩾═══════╗\n║         𝐌𝐄𝐍𝐔 - %category\n╠═══════⩽🌸ᩥ⩾═══════╝\n║╭──────────────┄',
-body: '║│* ◌⃘۪֗ㅤ ⃝ܶ🌸᪶ %cmd %isdiamond %isPremium',
-footer: '║╰──────────────┄\n╚═══════⩽🌸ᩥ⩾═══════╝\n\n',
-after: ``
+let tags = {
+  'main': 'ɪɴꜰᴏ ʙᴏᴛ',
+  'buscador': 'ʙᴜꜱQᴜᴇᴅᴀꜱ',
+  'search': 'ꜱᴇᴀʀᴄʜ',
+  'game': 'ᴅɪᴠᴇʀꜱɪᴏɴ',
+  'jadibot': 'ꜱᴜʙ ʙᴏᴛꜱ',
+  'rpg': 'ʀᴘɢ',
+  'rg': 'ʀᴇɢɪꜱᴛʀᴏ',
+  'xp': 'ᴇxᴘ',
+  'sticker': 'ꜱᴛɪᴄᴋᴇʀꜱ',
+  'anime': 'ᴀɴɪᴍᴇꜱ',
+  'database': 'ᴅᴀᴛᴀʙᴀꜱᴇ',
+  'fix': 'ꜰɪxᴍꜱɢᴇꜱᴘᴇʀᴀ',
+  'grupo': 'ɢʀᴜᴘᴏꜱ',
+  'nable': 'ᴏɴ / ᴏꜰꜰ', 
+  'dl': 'ᴅᴇꜱᴄᴀʀɢᴀꜱ',
+  'fun': 'ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ',
+  'info': 'ɪɴꜰᴏʀᴍᴀᴄɪᴏɴ',
+  'nsfw': 'ɴꜱꜰᴡ', 
+  'owner': 'ᴄʀᴇᴀᴅᴏʀ',
+  'mods': 'ꜱᴛᴀꜰꜰ',
+  'audio': 'ᴀᴜᴅɪᴏꜱ', 
+  'ai': 'ᴀɪ ʙᴏᴛ',
+  'convertir': 'ᴄᴏɴᴠᴇʀᴛɪᴅᴏʀᴇꜱ',
+  'audios': 'ᴀᴜᴅɪᴏꜱ',
 }
-let ppp = 'https://qu.ax/zklR.jpg'
+
+const defaultMenu = {
+  before: `Hola \`%name\` soy Asuna Yuuki, %greeting
+
+乂 _\`ᴜ\` \`ꜱ\` \`ᴜ\` \`ᴀ\` \`ʀ\` \`ɪ\` \`ᴏ\`_ 乂
+
+• _\`ɴᴏᴍʙʀᴇ\`_ :: %name
+• _\`ʙᴏᴛ\`_ :: Asuna Yuuki
+• _\`ᴍᴏᴅᴏ\`_ :: Público
+• _\`ᴀᴄᴛɪᴠᴏ\`_ :: %muptime
+• _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: %totalreg
+• _\`ᴄᴏʀᴀᴢᴏɴᴇꜱ\`_ :: %dolares
+• _\`ɴɪᴠᴇʟ\`_ :: %level
+
+乂 _\`ᴄ\` \`ᴏ\` \`ᴍ\` \`ᴀ\` \`ɴ\` \`ᴅ\` \`ᴏ\` \`ꜱ\`_ 乂
+`.trimStart(),
+  header: '╭─(🌸)❝┊ *`%category`* ┊❝(🌸)',
+  body: '┊⋄☆ %cmd\n',
+  footer: '╰─── –\n',
+  after: `> Powered By Jose y Dioneibi`,
+}
+let ppp = 'https://qu.ax/xvXl.jpg'
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { exp, Dolares, level, role } = global.db.data.users[m.sender]
+    let { exp, corazones, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -97,7 +113,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
-        Dolares: plugin.Dolares,
+        corazones: plugin.corazones,
         premium: plugin.premium,
         enabled: !plugin.disabled,
       }
@@ -144,14 +160,14 @@ botofc: (conn.user.jid == global.conn.user.jid ? '🚩 𝙴𝚂𝚃𝙴 𝙴𝚂
 totalexp: exp,
 xp4levelup: max - exp,
 github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-greeting, level, Dolares, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+greeting, level, corazones, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
 readmore: readMore
 }
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
 const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
-const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/327f6ad853cb4f405aa80.jpg')
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/xvXl.jpg')
 
   let category = "video"
   const db = './media/database/db.json'
@@ -163,12 +179,15 @@ const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegr
   const gif = await response.buffer()
  // const img = imagen1
 
-await m.react('✅') 
-await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲 𝗹𝗮 𝗕𝗼𝘁...𓏲੭*', fakegif3, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: '♡《🌸 ¡𝑨𝒔𝒖𝒏𝒂 𝒀𝒖𝒖𝒌𝒊, 𝒍𝒂 𝒃𝒐𝒕 𝒎𝒂𝒔 𝒆𝒍𝒆𝒈𝒂𝒏𝒕𝒆! ✨》♡', sourceUrl: canal, thumbnail: icons }}})
+await m.react('🌸') 
+// await conn.reply(m.chat, '*ꪹ͜𓂃͡𝗖𝗮𝗿𝗴𝗮𝗻𝗱𝗼 𝗘𝗹 𝗠𝗲𝗻𝘂 𝗗𝗲 𝗹𝗮 𝗕𝗼𝘁...𓏲੭*', fakegif3, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: packname, body: '🌸 ¡Asuna la mejor Bot!', sourceUrl: canal, thumbnail: icons }}})
 
 // await conn.reply(m.chat, '🍟 Enviando el menú.....', m, rcanal)
 
-await conn.sendFile(m.chat, ppp, 'menu.jpg', text.trim(), fakegif3, null, fake)
+await conn.sendFile(m.chat, ppp, 'menu.jpg', Styles(text.trim()), fakegif3, null, fake)
+
+/* await conn.sendButton(m.chat, text, '@xrljose', ppp, [
+['', '']], null, [['CANAL 🐈‍⬛', `${canal}`], ['CANAL 2', `wa.me/51950148255`]], m) */
 
   } catch (e) {
     conn.reply(m.chat, '🔵 Lo sentimos, el menú tiene un error', m, rcanal, )
@@ -195,29 +214,29 @@ function clockString(ms) {
   var ase = new Date();
   var hour = ase.getHours();
 switch(hour){
-  case 0: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌙'; break;
-  case 1: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 💤'; break;
-  case 2: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🦉'; break;
-  case 3: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 ✨'; break;
-  case 4: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 💫'; break;
-  case 5: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌅'; break;
-  case 6: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌄'; break;
-  case 7: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌅'; break;
-  case 8: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 💫'; break;
-  case 9: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 ✨'; break;
-  case 10: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌞'; break;
-  case 11: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌨'; break;
-  case 12: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 ❄'; break;
-  case 13: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐝𝐢𝐚𝐬 🌤'; break;
-  case 14: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐭𝐚𝐫𝐝𝐞𝐬 🌇'; break;
-  case 15: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐭𝐚𝐫𝐝𝐞𝐬 🥀'; break;
-  case 16: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐭𝐚𝐫𝐝𝐞𝐬 🌹'; break;
-  case 17: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐭𝐚𝐫𝐝𝐞𝐬 🌆'; break;
-  case 18: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌙'; break;
-  case 19: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌃'; break;
-  case 20: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌌'; break;
-  case 21: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌃'; break;
-  case 22: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌙'; break;
-  case 23: hour = '𝐁𝐮𝐞𝐧𝐚𝐬 𝐧𝐨𝐜𝐡𝐞𝐬 🌃'; break;
+  case 0: hour = 'Buenas noches 🌙'; break;
+  case 1: hour = 'Buenas noches 💤'; break;
+  case 2: hour = 'Buenas noches 🦉'; break;
+  case 3: hour = 'Buenas noches ✨'; break;
+  case 4: hour = 'Buenos dias 💫'; break;
+  case 5: hour = 'Buenos dias 🌅'; break;
+  case 6: hour = 'Buenos dias 🌄'; break;
+  case 7: hour = 'Buenos dias 🌅'; break;
+  case 8: hour = 'Buenos dias 💫'; break;
+  case 9: hour = 'Buenos dias ✨'; break;
+  case 10: hour = 'Buenos dias 🌞'; break;
+  case 11: hour = 'Buenos dias 🌨'; break;
+  case 12: hour = 'Buenos dias ❄'; break;
+  case 13: hour = 'Buenos dias 🌤'; break;
+  case 14: hour = 'Buenas tardes 🌇'; break;
+  case 15: hour = 'Buenas tardes 🥀'; break;
+  case 16: hour = 'Buenas tardes 🌹'; break;
+  case 17: hour = 'Buenas tardes 🌆'; break;
+  case 18: hour = 'Buenas noches 🌙'; break;
+  case 19: hour = 'Buenas noches 🌃'; break;
+  case 20: hour = 'Buenas noches 🌌'; break;
+  case 21: hour = 'Buenas noches 🌃'; break;
+  case 22: hour = 'Buenas noches 🌙'; break;
+  case 23: hour = 'Buenas noches 🌃'; break;
 }
   var greeting = hour;
