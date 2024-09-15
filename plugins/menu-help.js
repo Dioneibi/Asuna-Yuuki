@@ -145,7 +145,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let img6 = "https://qu.ax/TVkn.jpg";
     let img8 = "https://qu.ax/MkoO.jpg";
     let img9 = "https://qu.ax/tOe.jpg";
-    let img10 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img10 = "https://qu.ax/Hbel.jpg";
     let img11 = "https://i.ibb.co/SfYFJCG/file.jpg";
 
     await conn.sendListB(m.chat, menu, txt, `🌸ᛜॕ༹Mᴇɴᴜ Lɪsᴛ🌸ᛜॕ༹`, [vid, img, img2, img3, img4, img5, img6, img8, img9, img10, img11].getRandom(), listSections, estilo);
