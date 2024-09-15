@@ -136,8 +136,8 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         ],
     });
 
-    let vid = "https://qu.ax/zUUy.jpeg'";
-    let img = "https://qu.ax/KJrp.jpeg'";
+    let vid = "https://qu.ax/MjFk.jpg'";
+    let img = "https://qu.ax/MjFk.jpg'";
 
     await conn.sendListB(m.chat, menu, txt, `🌸ᛜॕ༹Mᴇɴᴜ Lɪsᴛ🌸ᛜॕ༹`, [vid, img].getRandom(), listSections, estilo);
 };
