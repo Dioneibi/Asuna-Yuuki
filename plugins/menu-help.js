@@ -144,7 +144,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let img5 = "https://qu.ax/QjAq.jpg";
     let img6 = "https://qu.ax/TVkn.jpg";
     let img8 = "https://qu.ax/MkoO.jpg";
-    let img9 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img9 = "https://qu.ax/tOe.jpg";
     let img10 = "https://i.ibb.co/SfYFJCG/file.jpg";
     let img11 = "https://i.ibb.co/SfYFJCG/file.jpg";
 
