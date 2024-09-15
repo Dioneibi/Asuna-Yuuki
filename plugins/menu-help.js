@@ -46,7 +46,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     let totalreg = Object.keys(global.db.data.users).length;
     let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length;
 
-    m.react("🍸");
+    m.react("🤍");
     let menu = ``;
 
     let txt = ""
@@ -60,21 +60,21 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     txt += '`ᴠᴇʀɪꜰɪᴄᴀᴅᴏꜱ ::`' + ` ${rtotalreg}\n`;
     txt += '`ᴀᴄᴛɪᴠᴏ ::`' + ` ${uptime}\n`;
     txt += '`ᴄᴏɴᴛᴀᴄᴛᴏ ::` #owner\n\n';
-    txt += "> ʙʏ : Jᴏsᴇ Xʀʟ";
+    txt += "> Powered by Jose Xrl y Dioneibi";
 
     let listSections = [];
 
         listSections.push({
-        title: `🔖 SELECCIÓNA LO QUE NECESITES`, highlight_label: `Popular AsunaYuuki`,
+        title: `🔖 SELECCIÓNA LO QUE NECESITES`, highlight_label: `Popular Asuna Yuuki`,
         rows: [
             {
                 header: "𝗔𝗨𝗧𝗢 𝗩𝗘𝗥𝗜𝗙𝗜𝗖𝗔𝗥 ✅",
                 title: "",
                 description: `Verificacion Automáticamente`,
-                id: `.reg Yuuki.18`,
+                id: `.reg AsunaYuuki.18`,
             },
             {
-                header: "𝗠𝗘𝗡𝗨 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 🌸",
+                header: "𝗠𝗘𝗡𝗨 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗢 🤍",
                 title: "",
                 description: `MENU COMPLETO`,
                 id: `.allmenu`,
@@ -110,7 +110,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 id: `${usedPrefix}menuai`,
             },
             {
-                header: "𝗥𝗘𝗗𝗘𝗦 𝗔𝗦𝗨𝗡𝗔 𝗬𝗨𝗨𝗞𝗜 🍄",
+                header: "𝗥𝗘𝗗𝗘𝗦 𝗔𝗦𝗨𝗡𝗔 𝗬𝗨𝗨𝗞𝗜 🌸",
                 title: "",
                 description: `𝘔𝘶𝘦𝘴𝘵𝘳𝘢 𝘭𝘢𝘴 𝘳𝘦𝘥𝘦𝘴 𝘥𝘦𝘭 𝘣𝘰𝘵`,
                 id: `${usedPrefix}redes`,
@@ -136,10 +136,19 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         ],
     });
 
-    let vid = "https://qu.ax/MjFk.jpg'";
-    let img = "https://qu.ax/MjFk.jpg'";
+    let vid = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img2 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img3 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img4 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img5 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img6 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img8 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img9 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img10 = "https://i.ibb.co/SfYFJCG/file.jpg";
+    let img11 = "https://i.ibb.co/SfYFJCG/file.jpg";
 
-    await conn.sendListB(m.chat, menu, txt, `🌸ᛜॕ༹Mᴇɴᴜ Lɪsᴛ🌸ᛜॕ༹`, [vid, img].getRandom(), listSections, estilo);
+    await conn.sendListB(m.chat, menu, txt, `🌸ᛜॕ༹Mᴇɴᴜ Lɪsᴛ🌸ᛜॕ༹`, [vid, img, img2, img3, img4, img5, img6, img8, img9, img10, img11].getRandom(), listSections, estilo);
 };
 
 handler.command = ["menu", "help", "menú"];
