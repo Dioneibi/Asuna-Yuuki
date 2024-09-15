@@ -1,17 +1,17 @@
 var handler  = async (m, { conn }) => {
 
-let texto = `🤍 *Instalación de GenesisBot-MD*
+let texto = `🎋 *Instalación de Asuna Yuuki*
 
-☕ Dudas: ${creador}
-☕ Tutoríal: *¡Pronto!*
+🥛 Dudas: ${creador}
+🥛 Tutoríal: *¡Pronto!*
 
-*Comandos de instalación via Termux ♣️*
+*Comandos de instalación via Termux *
 
 termux-setup-storage
 
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 
-git clone https://github.com/Angelito-OFC/GenesisBot-Pro && cd GenesisBot-MD
+git clone https://github.com/Dioneibi/Asuna-Yuuki && cd Asuna-Yuuki
 
 yarn install
 
@@ -21,9 +21,9 @@ npm update
 
 npm start
 
-_Utilice "comandos" para enviarle los comandos uno por uno 🤍_
+_Utilice "comandos" para enviarle los comandos uno por uno 🎋_
 
-_Utilice ".olympus o .corinplus" para enviarle la instalación por cualquiera de los 2 *Hosting* 🤍_`
+_Utilice ".olympus o .corinplus" para enviarle la instalación por cualquiera de los 2 *Hosting* 🥛_`
 
 conn.reply(m.chat, texto, m, rcanal )
 
@@ -34,7 +34,7 @@ m.reply('termux-setup-storage')
 await delay(1000 * 1)
 m.reply('apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn')
 await delay(1000 * 1)
-m.reply('git clone https://github.com/Angelito-OFC/GenesisBot-Pro && cd GenesisBot-MD')
+m.reply('git clone https://github.com/Dioneibi/Asuna-Yuuki && cd Asuna-Yuuki')
 await delay(1000 * 1)
 m.reply('yarn install')
 await delay(1000 * 1)
