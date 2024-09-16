@@ -8,32 +8,30 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“𝐇𝐨𝐥𝐚 *%name* 𝐒𝐨𝐲 𝐆𝐞𝐧𝐞𝐬𝐢𝐬𝐁𝐨𝐭, 𝐓𝐞𝐧 𝐮𝐧 𝐛𝐮𝐞𝐧 𝐝𝐢𝐚"
+  before: `“Hᴏʟᴀ *%name* Sᴏʏ Asᴜɴᴀ Yᴜᴜᴋɪ Bᴏᴛ, Tᴇɴ ᴜɴ ʙᴜᴇɴ ᴅɪ́ᴀ"
 
-✧ ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬ ✧ 
+❀ ▬▭▬▭▬ ❀✧❀ ▬▭▬▭▬ ❀
 
- '︶꒦꒷♡꒷꒦︶.
-┊✶ 𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
-┊┊✶ 𝐁𝐨𝐭: Génesis Bot
-┊┊✶ 𝐌𝐨𝐝𝐨: Público
-┊┊✶ 𝐅𝐞𝐜𝐡𝐚: ${fecha}
-┊┊✶ 𝐔𝐬𝐞𝐫𝐬: %totalreg
-┊┊✶ 𝐍𝐢𝐯𝐞𝐥: %level 
-. .‿̩͙‿̩̩̥͙̽‿̩͙‿̩͙‿̩̩̥͙̽‿̩͙‿̩͙‿̩̩̥͙̽‿̩͙‿̩͙‿̩̩̥͙̽‿̩͙┉ˏ͛ ༝̩̩̥͙　 ҉　
+⭒ᮀ᭢☆ Cʟɪᴇɴᴛᴇ: %name
+⭒ᮀ᭢☆ Bᴏᴛ: Asuna Yuuki
+⭒ᮀ᭢☆ Mᴏᴅᴏ: Público
+⭒ᮀ᭢☆ Fᴇᴄʜᴀ: ${fecha}
+⭒ᮀ᭢☆ Usᴇʀs: %totalreg
+⭒ᮀ᭢☆ Nɪᴠᴇʟ: %level 
 
-✦•····················•✦•···················•✦
+*▬▭▬▭▬▭▬▭▬▭▬▭▬*
 %readmore
 `.trimStart(),
-  header: '✞͙͙͙͙͙͙͙͙͙͙⏜❟︵ֹ̩̥̩̥̩̥̩̩̥⏜੭*•̩̩͙✩•̩̩͙*˚୧ֹ⏜︵ֹ̩̥̩̥̩̥̩̥̩̥̩̥̩̥❟⏜፞✞͙͙͙͙͙͙͙͙͙͙\n╠ • ˗ˏ✎*ೃ `%category`\n╠ ┈──✦﹀﹀|﹀﹀﹕₊˚ ✧. *. ⋆\n╠ ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈',
-  body: '║✶ %cmd %isPremium\n',
-  footer: '╚════•.·:·.✧ ✦ ✧.·:·.*•════╝',
+  header: '╭─(🌸)❝┊ *`%category`* ┊❝(🌸)',
+  body: '┊⋄☆ %cmd %isPremium\n',
+  footer: '╰─── –\n',
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'ai': '𝐀𝐈 𝐁𝐎𝐓',
 }
-let img = 'https://i.ibb.co/8g5yZr5/file.jpg'
+let img = 'https://files.catbox.moe/ogpp8x.jpg'
 
   try {
           // DEFAULT MENU
@@ -186,8 +184,8 @@ let img = 'https://i.ibb.co/8g5yZr5/file.jpg'
  let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
 await m.react('☕') 
 
-await conn.sendButton(m.chat, text, '@usxr_angelito0', img, [
-['MENU COMPLETO🤍', '.allmenu'], ['DUEÑO 🫧', '.owner']], null, [['CANAL 🐈‍⬛', `${canal}`]], m)
+await conn.sendButton(m.chat, text, '@xrljose', img, [
+['MENU COMPLETO🥛', '.allmenu'], ['DUEÑO 🫧', '.owner']], null, [['CANAL 🐈‍⬛', `${canal}`]], m)
   } catch (e) {
     conn.reply(m.chat, 'Lo siento, el menú tiene un error.', m)
     throw e
