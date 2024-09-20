@@ -1,4 +1,4 @@
-import Scraper from "@SumiFX/Scraper"
+import Scraper from "@bochilteam/scraper"
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 if (!args[0]) return m.reply('🔍 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`)
