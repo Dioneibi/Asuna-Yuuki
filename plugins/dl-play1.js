@@ -1,71 +1,42 @@
-import fetch from 'node-fetch';
 import yts from 'yt-search';
-import ytdl from 'ytdl-core';
-import axios from 'axios';
-import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
-const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-if (!text) throw `_Esᴄʀɪʙᴇ ᴜɴᴀ ᴘᴇᴛɪᴄɪᴏ́ɴ ʟᴜᴇɢᴏ ᴅᴇʟ ᴄᴏᴍᴀɴᴅᴏ, ᴇᴊᴇᴍᴘʟᴏ 🛍️ :_ \n*${usedPrefix + command} Billie Eilish - Bellyache*`
-try { 
-const yt_play = await search(args.join(' '))
-const texto1 = `
-*╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈⊰*
-┟─⬪ꕤ 🌸꤬ᩙ:໑ٜ࣪𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦໑ ꕤ 🌸꤬ᩙ:⬪╮
-┟─⬪🛍️⬪࣪ꥈ𑁍⃪࣭۪ٜ݊݊݊݊݊໑ٜ࣪𝗔𝗦𝗨𝗡𝗔 𝗬𝗨𝗨𝗞𝗜໑⃪࣭۪ٜ݊݊݊݊𑁍ꥈ࣪⬪╯
-│
-├ ꕤ 🌸꤬ᩙ:. _*𝘛𝘪𝘵𝘶𝘭𝘰*_
-├» ${yt_play[0].title}
-├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┄
-├ ꕤ 🌸꤬ᩙ:. _*𝘱𝘶𝘣𝘭𝘪𝘤𝘢𝘥𝘰*_
-├» ${yt_play[0].ago}
-├╌╌╌╌╌╌╌╌╌╌╌╌╌╌┈
-├ ꕤ 🌸꤬ᩙ:. _*𝘋𝘶𝘳𝘢𝘤𝘪𝘰́𝘯*_
-├» ${secondString(yt_play[0].duration.seconds)}
-├╌╌╌╌╌╌╌╌╌╌╌╌┄
-├ ꕤ 🌸꤬ᩙ:. _*🅅𝕚𝕤𝕥𝕒𝕤*_
-├» ${MilesNumber(yt_play[0].views)}
-├╌╌╌╌╌╌╌╌╌╌┄
-├ ꕤ 🌸꤬ᩙ:. _*🄰𝕦𝕥𝕠𝕣(𝕒)*_
-├» ${yt_play[0].author.name}
-├╌╌╌╌╌╌╌╌┈
-├ ꕤ 🌸꤬ᩙ:. _*🄴𝕟𝕝𝕒𝕔𝕖*_
-├» ${yt_play[0].url}
-*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈⊰*۪`.trim()
 
-await conn.sendButton(m.chat, wm, texto1, yt_play[0].thumbnail, [['𝗠̷̸͢𝗘̷̸𝗡̷̸͢𝗨̷̸࠷𝗬̷̸𝗨̷̸͢𝗨̷̸𝗞̷̸͢𝗜̷̸ࠬ🧇̷̸̻ํ', `${usedPrefix}menu`],['🌸 𝗔 𝗨 𝗗 𝗜 𝗢',`${usedPrefix}play5 ${yt_play[0].url}`],['🌸 𝗩 𝗜 𝗗 𝗘 𝗢',`${usedPrefix}play6 ${yt_play[0].url}`]], null, null, imagen1)
-} catch (e) {
-await conn.reply(m.chat, `*[ ! ] ʜᴜʙᴏ ᴜɴ ᴇʀʀᴏʀ ᴇɴ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ ᴘᴏʀ ғᴀᴠᴏʀ ɪɴᴛᴇɴᴛᴀ ᴍᴀs ᴛᴀʀᴅᴇ..*`, fkontak, m, rcanal)
-console.log(`❗❗ᴇʀʀᴏʀ ${usedPrefix + command} ❗❗`)
-console.log(e)
-handler.limit = 0
-}}
-handler.command = ['play', 'play2', 'play3', 'play4']
-//handler.limit = 3
-handler.register = true 
-handler.group = true
+let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+    if (!text) {
+        return conn.reply(m.chat, '*Qᴜᴇ Qᴜɪᴇʀᴇs Qᴜᴇ Bᴜsǫᴜᴇ 💗*', m);
+    }
+
+    await m.react('⏳');
+    let res = await yts(text);
+    let play = res.videos[0];
+
+    if (!play) {
+        throw `Error: Vídeo no encontrado`;
+    }
+
+    let { title, thumbnail, ago, timestamp, views, videoId, url } = play;
+
+    let txt = '```𝗗𝗲𝘀𝗰𝗮𝗿𝗴𝗮𝘀 𝗬𝗧 🛍️```\n';
+    txt += '『⿻᪵᪼⿻᪽᪳⿻᪽᪱⿻᪸᪴⿻᪶᪰「🌸᪵᪰」⿻᪽᪼⿻᪵᪼⿻᪽᪳⿻᪽᪱⿻᪸᪴』\n';
+    txt += `⿻᪸᪴ *𝗧𝗶𝘁𝘂𝗹𝗼* ❀ᩘ͜🌸 _${title}_\n`;
+    txt += `⿻᪸᪴ *𝗖𝗿𝗲𝗮𝗱𝗼* ❀ᩘ͜🌸 _${ago}_\n`;
+    txt += `⿻᪸᪴ *𝗗𝘂𝗿𝗮𝗰𝗶𝗼́𝗻* ❀ᩘ͜🌸 _${timestamp}_\n`;
+    txt += `⿻᪸᪴ *𝗩𝗶𝘀𝘁𝗮𝘀* ❀ᩘ͜🌸 _${views.toLocaleString()}_\n`;
+    txt += `> *𝗟𝗶𝗻𝗸* ❀ᩘ͜🌸 _https://www.youtube.com/watch?v=${videoId}_\n`;
+    txt += '『⿻᪵᪼⿻᪽᪳⿻᪽᪱⿻᪸᪴⿻᪶᪰「🌸᪵᪰」⿻᪽᪼⿻᪵᪼⿻᪽᪳⿻᪽᪱⿻᪸᪴』\n';
+    txt += 'Pᴏᴡᴇʀᴇᴅ Bʏ Dɪᴏɴᴇʏʙɪ ʏ Jᴏsᴇ Xrl;
+
+    await conn.sendButton2(m.chat, txt, '. ', thumbnail, [
+        ['MP3', `${usedPrefix}ytmp3 ${url}`],
+        ['MP3DOC', `${usedPrefix}ytmp3doc ${url}`],
+        ['MP4', `${usedPrefix}ytmp4 ${url}`], 
+        ['MP4DOC', `${usedPrefix}ytmp4doc ${url}`]
+        ], null, [['Canal', 'https://whatsapp.com/channel/0029Vah2mhq6BIEZRroXx737']], m);
+
+    await m.react('✅');
+};
+
+//handler.help = ['play'];
+handler.tags = ['downloader'] 
+handler.command = ['play',];
+
 export default handler;
-
-async function search(query, options = {}) {
-const search = await yts.search({query, hl: 'es', gl: 'ES', ...options});
-return search.videos;
-}
-
-function MilesNumber(number) {
-const exp = /(\d)(?=(\d{3})+(?!\d))/g;
-const rep = '$1.';
-const arr = number.toString().split('.');
-arr[0] = arr[0].replace(exp, rep);
-return arr[1] ? arr.join('.') : arr[0];
-}
-
-function secondString(seconds) {
-seconds = Number(seconds);
-const d = Math.floor(seconds / (3600 * 24));
-const h = Math.floor((seconds % (3600 * 24)) / 3600);
-const m = Math.floor((seconds % 3600) / 60);
-const s = Math.floor(seconds % 60);
-const dDisplay = d > 0 ? d + (d == 1 ? ' día, ' : ' días, ') : '';
-const hDisplay = h > 0 ? h + (h == 1 ? ' hora, ' : ' horas, ') : '';
-const mDisplay = m > 0 ? m + (m == 1 ? ' minuto, ' : ' minutos, ') : '';
-const sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : '';
-return dDisplay + hDisplay + mDisplay + sDisplay;
-}
